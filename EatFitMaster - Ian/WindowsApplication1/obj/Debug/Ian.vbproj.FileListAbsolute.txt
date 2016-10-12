@@ -1,0 +1,8 @@
+F:\Documents\Visual Studio 2015\Projects\AdvForms\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+F:\Documents\Visual Studio 2015\Projects\AdvForms\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+F:\Documents\Visual Studio 2015\Projects\AdvForms\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+F:\Documents\Visual Studio 2015\Projects\AdvForms\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+F:\Documents\Visual Studio 2015\Projects\EatFitMaster - Ian\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+F:\Documents\Visual Studio 2015\Projects\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+F:\Documents\Visual Studio 2015\Projects\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+F:\Documents\Visual Studio 2015\Projects\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.pdb

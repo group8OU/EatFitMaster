@@ -1,0 +1,11 @@
+f:\documents\visual studio 2015\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+F:\Documents\Visual Studio 2015\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+F:\Documents\Visual Studio 2015\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+F:\Documents\Visual Studio 2015\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+F:\Documents\Visual Studio 2015\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbprojResolveAssemblyReference.cache
+F:\Documents\Visual Studio 2015\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+F:\Documents\Visual Studio 2015\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+F:\Documents\Visual Studio 2015\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+F:\Documents\Visual Studio 2015\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+F:\Documents\Visual Studio 2015\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+F:\Documents\Visual Studio 2015\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
