@@ -6,3 +6,7 @@ F:\Documents\Visual Studio 2015\Projects\EatFitMaster - Ian\WindowsApplication1\
 F:\Documents\Visual Studio 2015\Projects\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.exe
 F:\Documents\Visual Studio 2015\Projects\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.xml
 F:\Documents\Visual Studio 2015\Projects\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+F:\Documents\GitHub\EatFitMaster\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+F:\Documents\GitHub\EatFitMaster\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+F:\Documents\GitHub\EatFitMaster\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+F:\Documents\GitHub\EatFitMaster\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.pdb

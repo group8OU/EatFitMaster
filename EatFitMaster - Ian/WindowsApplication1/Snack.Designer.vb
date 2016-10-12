@@ -82,7 +82,7 @@ Partial Class Snack
         '
         'pbSGrain
         '
-        Me.pbSGrain.Location = New System.Drawing.Point(139, 28)
+        Me.pbSGrain.Location = New System.Drawing.Point(139, 12)
         Me.pbSGrain.Name = "pbSGrain"
         Me.pbSGrain.Size = New System.Drawing.Size(100, 78)
         Me.pbSGrain.TabIndex = 29
