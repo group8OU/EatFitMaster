@@ -43,6 +43,7 @@ Partial Class frmAdvOpt
         'rbNone
         '
         Me.rbNone.AutoSize = True
+        Me.rbNone.BackColor = System.Drawing.Color.Transparent
         Me.rbNone.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbNone.Location = New System.Drawing.Point(72, 51)
         Me.rbNone.Name = "rbNone"
@@ -50,11 +51,12 @@ Partial Class frmAdvOpt
         Me.rbNone.TabIndex = 12
         Me.rbNone.TabStop = True
         Me.rbNone.Text = "None"
-        Me.rbNone.UseVisualStyleBackColor = True
+        Me.rbNone.UseVisualStyleBackColor = False
         '
         'rbVege
         '
         Me.rbVege.AutoSize = True
+        Me.rbVege.BackColor = System.Drawing.Color.Transparent
         Me.rbVege.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbVege.Location = New System.Drawing.Point(72, 74)
         Me.rbVege.Name = "rbVege"
@@ -62,11 +64,12 @@ Partial Class frmAdvOpt
         Me.rbVege.TabIndex = 13
         Me.rbVege.TabStop = True
         Me.rbVege.Text = "Vegetarian"
-        Me.rbVege.UseVisualStyleBackColor = True
+        Me.rbVege.UseVisualStyleBackColor = False
         '
         'rbVegan
         '
         Me.rbVegan.AutoSize = True
+        Me.rbVegan.BackColor = System.Drawing.Color.Transparent
         Me.rbVegan.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbVegan.Location = New System.Drawing.Point(72, 97)
         Me.rbVegan.Name = "rbVegan"
@@ -74,11 +77,12 @@ Partial Class frmAdvOpt
         Me.rbVegan.TabIndex = 14
         Me.rbVegan.TabStop = True
         Me.rbVegan.Text = "Vegan"
-        Me.rbVegan.UseVisualStyleBackColor = True
+        Me.rbVegan.UseVisualStyleBackColor = False
         '
         'rbGluten
         '
         Me.rbGluten.AutoSize = True
+        Me.rbGluten.BackColor = System.Drawing.Color.Transparent
         Me.rbGluten.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbGluten.Location = New System.Drawing.Point(72, 120)
         Me.rbGluten.Name = "rbGluten"
@@ -86,101 +90,110 @@ Partial Class frmAdvOpt
         Me.rbGluten.TabIndex = 15
         Me.rbGluten.TabStop = True
         Me.rbGluten.Text = "Gluten Free"
-        Me.rbGluten.UseVisualStyleBackColor = True
+        Me.rbGluten.UseVisualStyleBackColor = False
         '
         'cbPeanut
         '
         Me.cbPeanut.AutoSize = True
+        Me.cbPeanut.BackColor = System.Drawing.Color.Transparent
         Me.cbPeanut.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbPeanut.Location = New System.Drawing.Point(247, 52)
+        Me.cbPeanut.Location = New System.Drawing.Point(248, 53)
         Me.cbPeanut.Name = "cbPeanut"
         Me.cbPeanut.Size = New System.Drawing.Size(76, 20)
         Me.cbPeanut.TabIndex = 16
         Me.cbPeanut.Text = "Peanuts"
-        Me.cbPeanut.UseVisualStyleBackColor = True
+        Me.cbPeanut.UseVisualStyleBackColor = False
         '
         'cbTreeNut
         '
         Me.cbTreeNut.AutoSize = True
+        Me.cbTreeNut.BackColor = System.Drawing.Color.Transparent
         Me.cbTreeNut.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbTreeNut.Location = New System.Drawing.Point(247, 75)
         Me.cbTreeNut.Name = "cbTreeNut"
         Me.cbTreeNut.Size = New System.Drawing.Size(86, 20)
         Me.cbTreeNut.TabIndex = 17
         Me.cbTreeNut.Text = "Tree Nuts"
-        Me.cbTreeNut.UseVisualStyleBackColor = True
+        Me.cbTreeNut.UseVisualStyleBackColor = False
         '
         'cbSoy
         '
         Me.cbSoy.AutoSize = True
+        Me.cbSoy.BackColor = System.Drawing.Color.Transparent
         Me.cbSoy.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSoy.Location = New System.Drawing.Point(247, 97)
         Me.cbSoy.Name = "cbSoy"
         Me.cbSoy.Size = New System.Drawing.Size(51, 20)
         Me.cbSoy.TabIndex = 18
         Me.cbSoy.Text = "Soy"
-        Me.cbSoy.UseVisualStyleBackColor = True
+        Me.cbSoy.UseVisualStyleBackColor = False
         '
         'cbEggs
         '
         Me.cbEggs.AutoSize = True
+        Me.cbEggs.BackColor = System.Drawing.Color.Transparent
         Me.cbEggs.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbEggs.Location = New System.Drawing.Point(247, 121)
         Me.cbEggs.Name = "cbEggs"
         Me.cbEggs.Size = New System.Drawing.Size(59, 20)
         Me.cbEggs.TabIndex = 19
         Me.cbEggs.Text = "Eggs"
-        Me.cbEggs.UseVisualStyleBackColor = True
+        Me.cbEggs.UseVisualStyleBackColor = False
         '
         'cbFish
         '
         Me.cbFish.AutoSize = True
+        Me.cbFish.BackColor = System.Drawing.Color.Transparent
         Me.cbFish.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbFish.Location = New System.Drawing.Point(340, 52)
         Me.cbFish.Name = "cbFish"
         Me.cbFish.Size = New System.Drawing.Size(52, 20)
         Me.cbFish.TabIndex = 20
         Me.cbFish.Text = "Fish"
-        Me.cbFish.UseVisualStyleBackColor = True
+        Me.cbFish.UseVisualStyleBackColor = False
         '
         'chShellfish
         '
         Me.chShellfish.AutoSize = True
+        Me.chShellfish.BackColor = System.Drawing.Color.Transparent
         Me.chShellfish.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chShellfish.Location = New System.Drawing.Point(340, 74)
         Me.chShellfish.Name = "chShellfish"
         Me.chShellfish.Size = New System.Drawing.Size(77, 20)
         Me.chShellfish.TabIndex = 21
         Me.chShellfish.Text = "Shellfish"
-        Me.chShellfish.UseVisualStyleBackColor = True
+        Me.chShellfish.UseVisualStyleBackColor = False
         '
         'cbLactose
         '
         Me.cbLactose.AutoSize = True
+        Me.cbLactose.BackColor = System.Drawing.Color.Transparent
         Me.cbLactose.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbLactose.Location = New System.Drawing.Point(340, 97)
         Me.cbLactose.Name = "cbLactose"
         Me.cbLactose.Size = New System.Drawing.Size(75, 20)
         Me.cbLactose.TabIndex = 22
         Me.cbLactose.Text = "Lactose"
-        Me.cbLactose.UseVisualStyleBackColor = True
+        Me.cbLactose.UseVisualStyleBackColor = False
         '
         'cbWheat
         '
         Me.cbWheat.AutoSize = True
+        Me.cbWheat.BackColor = System.Drawing.Color.Transparent
         Me.cbWheat.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbWheat.Location = New System.Drawing.Point(340, 121)
         Me.cbWheat.Name = "cbWheat"
         Me.cbWheat.Size = New System.Drawing.Size(66, 20)
         Me.cbWheat.TabIndex = 23
         Me.cbWheat.Text = "Wheat"
-        Me.cbWheat.UseVisualStyleBackColor = True
+        Me.cbWheat.UseVisualStyleBackColor = False
         '
         'lblDiet
         '
         Me.lblDiet.AutoSize = True
+        Me.lblDiet.BackColor = System.Drawing.Color.Transparent
         Me.lblDiet.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDiet.Location = New System.Drawing.Point(50, 20)
+        Me.lblDiet.Location = New System.Drawing.Point(50, 24)
         Me.lblDiet.Name = "lblDiet"
         Me.lblDiet.Size = New System.Drawing.Size(143, 24)
         Me.lblDiet.TabIndex = 24
@@ -189,8 +202,10 @@ Partial Class frmAdvOpt
         'lblAllergies
         '
         Me.lblAllergies.AutoSize = True
+        Me.lblAllergies.BackColor = System.Drawing.Color.Transparent
         Me.lblAllergies.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAllergies.Location = New System.Drawing.Point(215, 20)
+        Me.lblAllergies.ForeColor = System.Drawing.Color.Black
+        Me.lblAllergies.Location = New System.Drawing.Point(201, 25)
         Me.lblAllergies.Name = "lblAllergies"
         Me.lblAllergies.Size = New System.Drawing.Size(259, 24)
         Me.lblAllergies.TabIndex = 25
@@ -198,13 +213,14 @@ Partial Class frmAdvOpt
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(196, 153)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 30)
         Me.Button1.TabIndex = 26
         Me.Button1.Text = "Finish!"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'frmAdvOpt
         '
