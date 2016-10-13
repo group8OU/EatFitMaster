@@ -41,6 +41,7 @@ Partial Class frmDinner
         '
         'txtDDrink
         '
+        Me.txtDDrink.BackColor = System.Drawing.Color.NavajoWhite
         Me.txtDDrink.Location = New System.Drawing.Point(454, 112)
         Me.txtDDrink.Name = "txtDDrink"
         Me.txtDDrink.Size = New System.Drawing.Size(100, 20)
@@ -48,6 +49,7 @@ Partial Class frmDinner
         '
         'txtDFruit
         '
+        Me.txtDFruit.BackColor = System.Drawing.Color.NavajoWhite
         Me.txtDFruit.Location = New System.Drawing.Point(348, 112)
         Me.txtDFruit.Name = "txtDFruit"
         Me.txtDFruit.Size = New System.Drawing.Size(100, 20)
@@ -55,6 +57,7 @@ Partial Class frmDinner
         '
         'txtDGrain
         '
+        Me.txtDGrain.BackColor = System.Drawing.Color.NavajoWhite
         Me.txtDGrain.Location = New System.Drawing.Point(242, 112)
         Me.txtDGrain.Name = "txtDGrain"
         Me.txtDGrain.Size = New System.Drawing.Size(100, 20)
@@ -62,6 +65,7 @@ Partial Class frmDinner
         '
         'txtDVegetable
         '
+        Me.txtDVegetable.BackColor = System.Drawing.Color.NavajoWhite
         Me.txtDVegetable.Location = New System.Drawing.Point(136, 112)
         Me.txtDVegetable.Name = "txtDVegetable"
         Me.txtDVegetable.Size = New System.Drawing.Size(100, 20)
@@ -69,6 +73,7 @@ Partial Class frmDinner
         '
         'txtDProtein
         '
+        Me.txtDProtein.BackColor = System.Drawing.Color.NavajoWhite
         Me.txtDProtein.Location = New System.Drawing.Point(30, 112)
         Me.txtDProtein.Name = "txtDProtein"
         Me.txtDProtein.Size = New System.Drawing.Size(100, 20)
@@ -118,7 +123,8 @@ Partial Class frmDinner
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(584, 161)
+        Me.BackColor = System.Drawing.Color.Wheat
+        Me.ClientSize = New System.Drawing.Size(584, 166)
         Me.Controls.Add(Me.txtDDrink)
         Me.Controls.Add(Me.txtDFruit)
         Me.Controls.Add(Me.txtDGrain)

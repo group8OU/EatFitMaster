@@ -100,6 +100,7 @@ Partial Class frmBreakfast
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.OrangeRed
         Me.ClientSize = New System.Drawing.Size(484, 161)
         Me.Controls.Add(Me.txtBDrink)
         Me.Controls.Add(Me.txtBFruit)
