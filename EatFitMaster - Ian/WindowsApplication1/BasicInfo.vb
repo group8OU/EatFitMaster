@@ -128,5 +128,7 @@
         rtbDebug.AppendText("BMI: " & basic_BMI & vbNewLine)
         rtbDebug.AppendText("Goal Weight: " & basic_Gweight & vbNewLine)
         rtbDebug.AppendText("Goal Date: " & basic_Gdate & vbNewLine)
+        frmWelcome.Show()
+        Me.Hide()
     End Sub
 End Class
