@@ -42,3 +42,17 @@ C:\Users\Ian\Source\Repos\EatFitMaster2\EatFitMaster - Ian\WindowsApplication1\b
 C:\Users\Ian\Source\Repos\EatFitMaster2\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.exe
 C:\Users\Ian\Source\Repos\EatFitMaster2\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.xml
 C:\Users\Ian\Source\Repos\EatFitMaster2\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\Ian.vbprojResolveAssemblyReference.cache
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.frmAdvOpt.resources
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.frmWelcome.resources
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.window_basicinfo.resources
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.frmDinner.resources
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.frmBreakfast.resources
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.Login.resources
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.frmSnack.resources
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.frmLunch.resources
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\Ian.vbproj.GenerateResource.Cache
