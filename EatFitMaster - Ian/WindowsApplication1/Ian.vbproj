@@ -85,6 +85,12 @@
     <Compile Include="BaseMenu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BasicInfo.designer.vb">
+      <DependentUpon>BasicInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BasicInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dinner.Designer.vb">
       <DependentUpon>Dinner.vb</DependentUpon>
     </Compile>
@@ -100,9 +106,7 @@
     <Compile Include="Login.designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="Login.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Login.vb" />
     <Compile Include="Snack.Designer.vb">
       <DependentUpon>Snack.vb</DependentUpon>
     </Compile>
@@ -137,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaseMenu.resx">
       <DependentUpon>BaseMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicInfo.resx">
+      <DependentUpon>BasicInfo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dinner.resx">
       <DependentUpon>Dinner.vb</DependentUpon>
