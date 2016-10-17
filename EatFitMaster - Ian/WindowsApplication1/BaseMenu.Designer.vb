@@ -115,7 +115,7 @@ Partial Class frmWelcome
         Me.lblWorkout.AutoSize = True
         Me.lblWorkout.BackColor = System.Drawing.Color.Transparent
         Me.lblWorkout.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWorkout.Location = New System.Drawing.Point(248, 9)
+        Me.lblWorkout.Location = New System.Drawing.Point(248, 22)
         Me.lblWorkout.Name = "lblWorkout"
         Me.lblWorkout.Size = New System.Drawing.Size(224, 23)
         Me.lblWorkout.TabIndex = 7

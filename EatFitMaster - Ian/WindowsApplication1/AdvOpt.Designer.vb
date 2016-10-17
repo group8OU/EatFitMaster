@@ -205,7 +205,7 @@ Partial Class frmAdvOpt
         Me.lblAllergies.BackColor = System.Drawing.Color.Transparent
         Me.lblAllergies.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAllergies.ForeColor = System.Drawing.Color.Black
-        Me.lblAllergies.Location = New System.Drawing.Point(201, 25)
+        Me.lblAllergies.Location = New System.Drawing.Point(201, 17)
         Me.lblAllergies.Name = "lblAllergies"
         Me.lblAllergies.Size = New System.Drawing.Size(259, 24)
         Me.lblAllergies.TabIndex = 25
