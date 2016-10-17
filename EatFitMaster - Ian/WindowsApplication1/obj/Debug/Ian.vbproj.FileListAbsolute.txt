@@ -34,3 +34,7 @@ F:\Documents\GitHub\EatFitMaster\EatFitMaster5\EatFitMaster - Ian\WindowsApplica
 F:\Documents\GitHub\EatFitMaster\EatFitMaster5\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.exe
 F:\Documents\GitHub\EatFitMaster\EatFitMaster5\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.xml
 F:\Documents\GitHub\EatFitMaster\EatFitMaster5\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
