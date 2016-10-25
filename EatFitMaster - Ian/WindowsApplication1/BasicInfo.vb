@@ -80,9 +80,9 @@
     End Sub
     Private Sub btnBMICalculate_Click(sender As Object, e As EventArgs) Handles btnBMI.Click
         'formula from http://www.bmi-calculator.net/bmi-formula.php
-        basic_weight = txtWeight.Text
-        basic_height = (txtFt.Text * 12) + (txtInches.Text)
         Try
+            basic_weight = txtWeight.Text
+            basic_height = (txtFt.Text * 12) + (txtInches.Text)
             basic_BMI = ((basic_weight / (basic_height * basic_height)) * 703)
             txtBMI.Text = basic_BMI
         Catch BMIerror As Exception
@@ -116,6 +116,8 @@
             lblWeight.ForeColor = Color.Black
             lblBMI.ForeColor = Color.Black
             lblGWeight.ForeColor = Color.Black
+            frmWelcome.Show()
+            Me.Hide()
         End If
     End Sub
     Private Sub btnDebug_Click(sender As Object, e As EventArgs) Handles btnDebug.Click
