@@ -16,4 +16,8 @@
         window_basicinfo.Show()
         Me.Hide()
     End Sub
+
+    Private Sub txtAccount_TextChanged(sender As Object, e As EventArgs) Handles txtAccount.TextChanged
+
+    End Sub
 End Class
