@@ -116,8 +116,8 @@
             lblWeight.ForeColor = Color.Black
             lblBMI.ForeColor = Color.Black
             lblGWeight.ForeColor = Color.Black
-            frmWelcome.Show()
-            Me.Hide()
+            frmAdvOpt.Show()
+            Me.Close()
         End If
     End Sub
     Private Sub btnDebug_Click(sender As Object, e As EventArgs) Handles btnDebug.Click
@@ -130,7 +130,6 @@
         rtbDebug.AppendText("BMI: " & basic_BMI & vbNewLine)
         rtbDebug.AppendText("Goal Weight: " & basic_Gweight & vbNewLine)
         rtbDebug.AppendText("Goal Date: " & basic_Gdate & vbNewLine)
-        frmAdvOpt.Show()
-        Me.Close()
+
     End Sub
 End Class

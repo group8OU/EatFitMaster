@@ -26,4 +26,18 @@
 
 
     End Sub
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        For Each ctrl As Control In Me.Controls
+            If TypeOf ctrl Is CheckBox Then
+                DirectCast(ctrl, CheckBox).CheckState = CheckState.Unchecked
+            End If
+        Next
+        rbNone.Checked = True
+    End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        window_basicinfo.Show()
+        Me.Close()
+    End Sub
 End Class
