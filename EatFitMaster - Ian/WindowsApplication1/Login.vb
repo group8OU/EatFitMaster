@@ -5,7 +5,7 @@
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnReturn.Click
         frmWelcome.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -14,7 +14,7 @@
 
     Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
         window_basicinfo.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub txtAccount_TextChanged(sender As Object, e As EventArgs) Handles txtAccount.TextChanged
