@@ -22,6 +22,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         My.Forms.frmWelcome.Text = Now.ToString
         My.Forms.frmWelcome.Show()
+        Me.Close()
 
 
     End Sub
