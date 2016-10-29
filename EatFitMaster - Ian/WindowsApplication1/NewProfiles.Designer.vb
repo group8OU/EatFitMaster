@@ -60,22 +60,23 @@ Partial Class NewProfiles
         Me.txtWeight = New System.Windows.Forms.TextBox()
         Me.txtGoalWeight = New System.Windows.Forms.TextBox()
         Me.datGoalDate = New System.Windows.Forms.DateTimePicker()
-        Me.No_RestrictionsCheckBox = New System.Windows.Forms.CheckBox()
-        Me.VegetarianCheckBox = New System.Windows.Forms.CheckBox()
-        Me.VeganCheckBox = New System.Windows.Forms.CheckBox()
-        Me.Gluten_FreeCheckBox = New System.Windows.Forms.CheckBox()
+        Me.chkNoRestrictions = New System.Windows.Forms.CheckBox()
+        Me.chkVegetarian = New System.Windows.Forms.CheckBox()
+        Me.chkVegan = New System.Windows.Forms.CheckBox()
+        Me.chkGlutenFree = New System.Windows.Forms.CheckBox()
         Me.txtBMI = New System.Windows.Forms.TextBox()
-        Me.Peanut_AllergyCheckBox = New System.Windows.Forms.CheckBox()
-        Me.Tree_Nut_AllergyCheckBox = New System.Windows.Forms.CheckBox()
-        Me.Soy_AllergyCheckBox = New System.Windows.Forms.CheckBox()
-        Me.Egg_AllergyCheckBox = New System.Windows.Forms.CheckBox()
-        Me.Fish_AllergyCheckBox = New System.Windows.Forms.CheckBox()
-        Me.Shellfish_AllergyCheckBox = New System.Windows.Forms.CheckBox()
-        Me.Lactose_AllergyCheckBox = New System.Windows.Forms.CheckBox()
-        Me.Wheat_AllergyCheckBox = New System.Windows.Forms.CheckBox()
+        Me.chkPeanut = New System.Windows.Forms.CheckBox()
+        Me.chkTreeNut = New System.Windows.Forms.CheckBox()
+        Me.chkSoy = New System.Windows.Forms.CheckBox()
+        Me.chkEgg = New System.Windows.Forms.CheckBox()
+        Me.chkFish = New System.Windows.Forms.CheckBox()
+        Me.chkShellfish = New System.Windows.Forms.CheckBox()
+        Me.chkLactose = New System.Windows.Forms.CheckBox()
+        Me.chkWheat = New System.Windows.Forms.CheckBox()
         Me.btnBMI = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.lblRestrictions = New System.Windows.Forms.Label()
+        Me.lblWelcome = New System.Windows.Forms.Label()
         lblID = New System.Windows.Forms.Label()
         lblFirstName = New System.Windows.Forms.Label()
         lblLastName = New System.Windows.Forms.Label()
@@ -226,7 +227,7 @@ Partial Class NewProfiles
         'lblID
         '
         lblID.AutoSize = True
-        lblID.Location = New System.Drawing.Point(81, 98)
+        lblID.Location = New System.Drawing.Point(84, 168)
         lblID.Name = "lblID"
         lblID.Size = New System.Drawing.Size(21, 13)
         lblID.TabIndex = 1
@@ -235,15 +236,16 @@ Partial Class NewProfiles
         'txtID
         '
         Me.txtID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "ID", True))
-        Me.txtID.Location = New System.Drawing.Point(121, 94)
+        Me.txtID.Location = New System.Drawing.Point(124, 164)
         Me.txtID.Name = "txtID"
+        Me.txtID.ReadOnly = True
         Me.txtID.Size = New System.Drawing.Size(100, 20)
         Me.txtID.TabIndex = 2
         '
         'lblFirstName
         '
         lblFirstName.AutoSize = True
-        lblFirstName.Location = New System.Drawing.Point(42, 134)
+        lblFirstName.Location = New System.Drawing.Point(45, 204)
         lblFirstName.Name = "lblFirstName"
         lblFirstName.Size = New System.Drawing.Size(60, 13)
         lblFirstName.TabIndex = 3
@@ -252,7 +254,7 @@ Partial Class NewProfiles
         'txtFirstName
         '
         Me.txtFirstName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "First Name", True))
-        Me.txtFirstName.Location = New System.Drawing.Point(121, 130)
+        Me.txtFirstName.Location = New System.Drawing.Point(124, 200)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(100, 20)
         Me.txtFirstName.TabIndex = 4
@@ -260,7 +262,7 @@ Partial Class NewProfiles
         'lblLastName
         '
         lblLastName.AutoSize = True
-        lblLastName.Location = New System.Drawing.Point(41, 170)
+        lblLastName.Location = New System.Drawing.Point(44, 240)
         lblLastName.Name = "lblLastName"
         lblLastName.Size = New System.Drawing.Size(61, 13)
         lblLastName.TabIndex = 5
@@ -269,7 +271,7 @@ Partial Class NewProfiles
         'txtLastName
         '
         Me.txtLastName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Last Name", True))
-        Me.txtLastName.Location = New System.Drawing.Point(121, 166)
+        Me.txtLastName.Location = New System.Drawing.Point(124, 236)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(100, 20)
         Me.txtLastName.TabIndex = 6
@@ -277,7 +279,7 @@ Partial Class NewProfiles
         'lblSex
         '
         lblSex.AutoSize = True
-        lblSex.Location = New System.Drawing.Point(45, 206)
+        lblSex.Location = New System.Drawing.Point(48, 276)
         lblSex.Name = "lblSex"
         lblSex.Size = New System.Drawing.Size(57, 13)
         lblSex.TabIndex = 7
@@ -286,7 +288,7 @@ Partial Class NewProfiles
         'txtSex
         '
         Me.txtSex.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Sex (M/F)", True))
-        Me.txtSex.Location = New System.Drawing.Point(121, 202)
+        Me.txtSex.Location = New System.Drawing.Point(124, 272)
         Me.txtSex.Name = "txtSex"
         Me.txtSex.Size = New System.Drawing.Size(100, 20)
         Me.txtSex.TabIndex = 8
@@ -294,7 +296,7 @@ Partial Class NewProfiles
         'lblAge
         '
         lblAge.AutoSize = True
-        lblAge.Location = New System.Drawing.Point(73, 242)
+        lblAge.Location = New System.Drawing.Point(76, 312)
         lblAge.Name = "lblAge"
         lblAge.Size = New System.Drawing.Size(29, 13)
         lblAge.TabIndex = 9
@@ -303,7 +305,7 @@ Partial Class NewProfiles
         'txtAge
         '
         Me.txtAge.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Age", True))
-        Me.txtAge.Location = New System.Drawing.Point(121, 238)
+        Me.txtAge.Location = New System.Drawing.Point(124, 308)
         Me.txtAge.Name = "txtAge"
         Me.txtAge.Size = New System.Drawing.Size(100, 20)
         Me.txtAge.TabIndex = 10
@@ -311,7 +313,7 @@ Partial Class NewProfiles
         'lblHeight
         '
         lblHeight.AutoSize = True
-        lblHeight.Location = New System.Drawing.Point(44, 278)
+        lblHeight.Location = New System.Drawing.Point(47, 348)
         lblHeight.Name = "lblHeight"
         lblHeight.Size = New System.Drawing.Size(58, 13)
         lblHeight.TabIndex = 11
@@ -320,7 +322,7 @@ Partial Class NewProfiles
         'txtHeight
         '
         Me.txtHeight.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Height (in)", True))
-        Me.txtHeight.Location = New System.Drawing.Point(121, 274)
+        Me.txtHeight.Location = New System.Drawing.Point(124, 344)
         Me.txtHeight.Name = "txtHeight"
         Me.txtHeight.Size = New System.Drawing.Size(100, 20)
         Me.txtHeight.TabIndex = 12
@@ -328,7 +330,7 @@ Partial Class NewProfiles
         'lblWeight
         '
         lblWeight.AutoSize = True
-        lblWeight.Location = New System.Drawing.Point(41, 314)
+        lblWeight.Location = New System.Drawing.Point(44, 384)
         lblWeight.Name = "lblWeight"
         lblWeight.Size = New System.Drawing.Size(61, 13)
         lblWeight.TabIndex = 13
@@ -337,7 +339,7 @@ Partial Class NewProfiles
         'txtWeight
         '
         Me.txtWeight.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Weight (lb)", True))
-        Me.txtWeight.Location = New System.Drawing.Point(121, 310)
+        Me.txtWeight.Location = New System.Drawing.Point(124, 380)
         Me.txtWeight.Name = "txtWeight"
         Me.txtWeight.Size = New System.Drawing.Size(100, 20)
         Me.txtWeight.TabIndex = 14
@@ -345,7 +347,7 @@ Partial Class NewProfiles
         'lblGoalWeight
         '
         lblGoalWeight.AutoSize = True
-        lblGoalWeight.Location = New System.Drawing.Point(33, 350)
+        lblGoalWeight.Location = New System.Drawing.Point(36, 420)
         lblGoalWeight.Name = "lblGoalWeight"
         lblGoalWeight.Size = New System.Drawing.Size(69, 13)
         lblGoalWeight.TabIndex = 15
@@ -354,7 +356,7 @@ Partial Class NewProfiles
         'txtGoalWeight
         '
         Me.txtGoalWeight.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Goal Weight", True))
-        Me.txtGoalWeight.Location = New System.Drawing.Point(121, 346)
+        Me.txtGoalWeight.Location = New System.Drawing.Point(124, 416)
         Me.txtGoalWeight.Name = "txtGoalWeight"
         Me.txtGoalWeight.Size = New System.Drawing.Size(100, 20)
         Me.txtGoalWeight.TabIndex = 16
@@ -362,7 +364,7 @@ Partial Class NewProfiles
         'lblGoalDate
         '
         lblGoalDate.AutoSize = True
-        lblGoalDate.Location = New System.Drawing.Point(44, 386)
+        lblGoalDate.Location = New System.Drawing.Point(47, 456)
         lblGoalDate.Name = "lblGoalDate"
         lblGoalDate.Size = New System.Drawing.Size(58, 13)
         lblGoalDate.TabIndex = 17
@@ -371,55 +373,55 @@ Partial Class NewProfiles
         'datGoalDate
         '
         Me.datGoalDate.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.UserProfilesBindingSource, "Goal Date", True))
-        Me.datGoalDate.Location = New System.Drawing.Point(121, 382)
+        Me.datGoalDate.Location = New System.Drawing.Point(124, 452)
         Me.datGoalDate.Name = "datGoalDate"
         Me.datGoalDate.Size = New System.Drawing.Size(200, 20)
         Me.datGoalDate.TabIndex = 18
         '
-        'No_RestrictionsCheckBox
+        'chkNoRestrictions
         '
-        Me.No_RestrictionsCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "No Restrictions", True))
-        Me.No_RestrictionsCheckBox.Location = New System.Drawing.Point(360, 87)
-        Me.No_RestrictionsCheckBox.Name = "No_RestrictionsCheckBox"
-        Me.No_RestrictionsCheckBox.Size = New System.Drawing.Size(118, 24)
-        Me.No_RestrictionsCheckBox.TabIndex = 20
-        Me.No_RestrictionsCheckBox.Text = "No Restrictions"
-        Me.No_RestrictionsCheckBox.UseVisualStyleBackColor = True
+        Me.chkNoRestrictions.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "No Restrictions", True))
+        Me.chkNoRestrictions.Location = New System.Drawing.Point(363, 157)
+        Me.chkNoRestrictions.Name = "chkNoRestrictions"
+        Me.chkNoRestrictions.Size = New System.Drawing.Size(118, 24)
+        Me.chkNoRestrictions.TabIndex = 20
+        Me.chkNoRestrictions.Text = "No Restrictions"
+        Me.chkNoRestrictions.UseVisualStyleBackColor = True
         '
-        'VegetarianCheckBox
+        'chkVegetarian
         '
-        Me.VegetarianCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Vegetarian", True))
-        Me.VegetarianCheckBox.Location = New System.Drawing.Point(360, 113)
-        Me.VegetarianCheckBox.Name = "VegetarianCheckBox"
-        Me.VegetarianCheckBox.Size = New System.Drawing.Size(104, 24)
-        Me.VegetarianCheckBox.TabIndex = 22
-        Me.VegetarianCheckBox.Text = "Vegetarian"
-        Me.VegetarianCheckBox.UseVisualStyleBackColor = True
+        Me.chkVegetarian.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Vegetarian", True))
+        Me.chkVegetarian.Location = New System.Drawing.Point(363, 183)
+        Me.chkVegetarian.Name = "chkVegetarian"
+        Me.chkVegetarian.Size = New System.Drawing.Size(104, 24)
+        Me.chkVegetarian.TabIndex = 22
+        Me.chkVegetarian.Text = "Vegetarian"
+        Me.chkVegetarian.UseVisualStyleBackColor = True
         '
-        'VeganCheckBox
+        'chkVegan
         '
-        Me.VeganCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Vegan", True))
-        Me.VeganCheckBox.Location = New System.Drawing.Point(360, 139)
-        Me.VeganCheckBox.Name = "VeganCheckBox"
-        Me.VeganCheckBox.Size = New System.Drawing.Size(104, 24)
-        Me.VeganCheckBox.TabIndex = 24
-        Me.VeganCheckBox.Text = "Vegan"
-        Me.VeganCheckBox.UseVisualStyleBackColor = True
+        Me.chkVegan.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Vegan", True))
+        Me.chkVegan.Location = New System.Drawing.Point(363, 209)
+        Me.chkVegan.Name = "chkVegan"
+        Me.chkVegan.Size = New System.Drawing.Size(104, 24)
+        Me.chkVegan.TabIndex = 24
+        Me.chkVegan.Text = "Vegan"
+        Me.chkVegan.UseVisualStyleBackColor = True
         '
-        'Gluten_FreeCheckBox
+        'chkGlutenFree
         '
-        Me.Gluten_FreeCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Gluten Free", True))
-        Me.Gluten_FreeCheckBox.Location = New System.Drawing.Point(360, 165)
-        Me.Gluten_FreeCheckBox.Name = "Gluten_FreeCheckBox"
-        Me.Gluten_FreeCheckBox.Size = New System.Drawing.Size(104, 24)
-        Me.Gluten_FreeCheckBox.TabIndex = 26
-        Me.Gluten_FreeCheckBox.Text = "Gluten Free"
-        Me.Gluten_FreeCheckBox.UseVisualStyleBackColor = True
+        Me.chkGlutenFree.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Gluten Free", True))
+        Me.chkGlutenFree.Location = New System.Drawing.Point(363, 235)
+        Me.chkGlutenFree.Name = "chkGlutenFree"
+        Me.chkGlutenFree.Size = New System.Drawing.Size(104, 24)
+        Me.chkGlutenFree.TabIndex = 26
+        Me.chkGlutenFree.Text = "Gluten Free"
+        Me.chkGlutenFree.UseVisualStyleBackColor = True
         '
         'lblBMI
         '
         lblBMI.AutoSize = True
-        lblBMI.Location = New System.Drawing.Point(73, 422)
+        lblBMI.Location = New System.Drawing.Point(76, 492)
         lblBMI.Name = "lblBMI"
         lblBMI.Size = New System.Drawing.Size(29, 13)
         lblBMI.TabIndex = 27
@@ -428,94 +430,94 @@ Partial Class NewProfiles
         'txtBMI
         '
         Me.txtBMI.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "BMI", True))
-        Me.txtBMI.Location = New System.Drawing.Point(121, 418)
+        Me.txtBMI.Location = New System.Drawing.Point(124, 488)
         Me.txtBMI.Name = "txtBMI"
         Me.txtBMI.Size = New System.Drawing.Size(100, 20)
         Me.txtBMI.TabIndex = 28
         '
-        'Peanut_AllergyCheckBox
+        'chkPeanut
         '
-        Me.Peanut_AllergyCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Peanut Allergy", True))
-        Me.Peanut_AllergyCheckBox.Location = New System.Drawing.Point(484, 87)
-        Me.Peanut_AllergyCheckBox.Name = "Peanut_AllergyCheckBox"
-        Me.Peanut_AllergyCheckBox.Size = New System.Drawing.Size(104, 24)
-        Me.Peanut_AllergyCheckBox.TabIndex = 30
-        Me.Peanut_AllergyCheckBox.Text = "Peanut Allergy"
-        Me.Peanut_AllergyCheckBox.UseVisualStyleBackColor = True
+        Me.chkPeanut.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Peanut Allergy", True))
+        Me.chkPeanut.Location = New System.Drawing.Point(487, 157)
+        Me.chkPeanut.Name = "chkPeanut"
+        Me.chkPeanut.Size = New System.Drawing.Size(104, 24)
+        Me.chkPeanut.TabIndex = 30
+        Me.chkPeanut.Text = "Peanut Allergy"
+        Me.chkPeanut.UseVisualStyleBackColor = True
         '
-        'Tree_Nut_AllergyCheckBox
+        'chkTreeNut
         '
-        Me.Tree_Nut_AllergyCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Tree Nut Allergy", True))
-        Me.Tree_Nut_AllergyCheckBox.Location = New System.Drawing.Point(484, 113)
-        Me.Tree_Nut_AllergyCheckBox.Name = "Tree_Nut_AllergyCheckBox"
-        Me.Tree_Nut_AllergyCheckBox.Size = New System.Drawing.Size(104, 24)
-        Me.Tree_Nut_AllergyCheckBox.TabIndex = 32
-        Me.Tree_Nut_AllergyCheckBox.Text = "Tree Nut Allergy"
-        Me.Tree_Nut_AllergyCheckBox.UseVisualStyleBackColor = True
+        Me.chkTreeNut.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Tree Nut Allergy", True))
+        Me.chkTreeNut.Location = New System.Drawing.Point(487, 183)
+        Me.chkTreeNut.Name = "chkTreeNut"
+        Me.chkTreeNut.Size = New System.Drawing.Size(104, 24)
+        Me.chkTreeNut.TabIndex = 32
+        Me.chkTreeNut.Text = "Tree Nut Allergy"
+        Me.chkTreeNut.UseVisualStyleBackColor = True
         '
-        'Soy_AllergyCheckBox
+        'chkSoy
         '
-        Me.Soy_AllergyCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Soy Allergy", True))
-        Me.Soy_AllergyCheckBox.Location = New System.Drawing.Point(484, 139)
-        Me.Soy_AllergyCheckBox.Name = "Soy_AllergyCheckBox"
-        Me.Soy_AllergyCheckBox.Size = New System.Drawing.Size(104, 24)
-        Me.Soy_AllergyCheckBox.TabIndex = 34
-        Me.Soy_AllergyCheckBox.Text = "Soy Allergy"
-        Me.Soy_AllergyCheckBox.UseVisualStyleBackColor = True
+        Me.chkSoy.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Soy Allergy", True))
+        Me.chkSoy.Location = New System.Drawing.Point(487, 209)
+        Me.chkSoy.Name = "chkSoy"
+        Me.chkSoy.Size = New System.Drawing.Size(104, 24)
+        Me.chkSoy.TabIndex = 34
+        Me.chkSoy.Text = "Soy Allergy"
+        Me.chkSoy.UseVisualStyleBackColor = True
         '
-        'Egg_AllergyCheckBox
+        'chkEgg
         '
-        Me.Egg_AllergyCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Egg Allergy", True))
-        Me.Egg_AllergyCheckBox.Location = New System.Drawing.Point(484, 165)
-        Me.Egg_AllergyCheckBox.Name = "Egg_AllergyCheckBox"
-        Me.Egg_AllergyCheckBox.Size = New System.Drawing.Size(104, 24)
-        Me.Egg_AllergyCheckBox.TabIndex = 36
-        Me.Egg_AllergyCheckBox.Text = "Egg Allergy"
-        Me.Egg_AllergyCheckBox.UseVisualStyleBackColor = True
+        Me.chkEgg.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Egg Allergy", True))
+        Me.chkEgg.Location = New System.Drawing.Point(487, 235)
+        Me.chkEgg.Name = "chkEgg"
+        Me.chkEgg.Size = New System.Drawing.Size(104, 24)
+        Me.chkEgg.TabIndex = 36
+        Me.chkEgg.Text = "Egg Allergy"
+        Me.chkEgg.UseVisualStyleBackColor = True
         '
-        'Fish_AllergyCheckBox
+        'chkFish
         '
-        Me.Fish_AllergyCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Fish Allergy", True))
-        Me.Fish_AllergyCheckBox.Location = New System.Drawing.Point(484, 191)
-        Me.Fish_AllergyCheckBox.Name = "Fish_AllergyCheckBox"
-        Me.Fish_AllergyCheckBox.Size = New System.Drawing.Size(104, 24)
-        Me.Fish_AllergyCheckBox.TabIndex = 38
-        Me.Fish_AllergyCheckBox.Text = "Fish Allergy"
-        Me.Fish_AllergyCheckBox.UseVisualStyleBackColor = True
+        Me.chkFish.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Fish Allergy", True))
+        Me.chkFish.Location = New System.Drawing.Point(487, 261)
+        Me.chkFish.Name = "chkFish"
+        Me.chkFish.Size = New System.Drawing.Size(104, 24)
+        Me.chkFish.TabIndex = 38
+        Me.chkFish.Text = "Fish Allergy"
+        Me.chkFish.UseVisualStyleBackColor = True
         '
-        'Shellfish_AllergyCheckBox
+        'chkShellfish
         '
-        Me.Shellfish_AllergyCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Shellfish Allergy", True))
-        Me.Shellfish_AllergyCheckBox.Location = New System.Drawing.Point(484, 217)
-        Me.Shellfish_AllergyCheckBox.Name = "Shellfish_AllergyCheckBox"
-        Me.Shellfish_AllergyCheckBox.Size = New System.Drawing.Size(104, 24)
-        Me.Shellfish_AllergyCheckBox.TabIndex = 40
-        Me.Shellfish_AllergyCheckBox.Text = "Shellfish Allergy"
-        Me.Shellfish_AllergyCheckBox.UseVisualStyleBackColor = True
+        Me.chkShellfish.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Shellfish Allergy", True))
+        Me.chkShellfish.Location = New System.Drawing.Point(487, 287)
+        Me.chkShellfish.Name = "chkShellfish"
+        Me.chkShellfish.Size = New System.Drawing.Size(104, 24)
+        Me.chkShellfish.TabIndex = 40
+        Me.chkShellfish.Text = "Shellfish Allergy"
+        Me.chkShellfish.UseVisualStyleBackColor = True
         '
-        'Lactose_AllergyCheckBox
+        'chkLactose
         '
-        Me.Lactose_AllergyCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Lactose Allergy", True))
-        Me.Lactose_AllergyCheckBox.Location = New System.Drawing.Point(484, 243)
-        Me.Lactose_AllergyCheckBox.Name = "Lactose_AllergyCheckBox"
-        Me.Lactose_AllergyCheckBox.Size = New System.Drawing.Size(104, 24)
-        Me.Lactose_AllergyCheckBox.TabIndex = 42
-        Me.Lactose_AllergyCheckBox.Text = "Lactose Allergy"
-        Me.Lactose_AllergyCheckBox.UseVisualStyleBackColor = True
+        Me.chkLactose.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Lactose Allergy", True))
+        Me.chkLactose.Location = New System.Drawing.Point(487, 313)
+        Me.chkLactose.Name = "chkLactose"
+        Me.chkLactose.Size = New System.Drawing.Size(104, 24)
+        Me.chkLactose.TabIndex = 42
+        Me.chkLactose.Text = "Lactose Allergy"
+        Me.chkLactose.UseVisualStyleBackColor = True
         '
-        'Wheat_AllergyCheckBox
+        'chkWheat
         '
-        Me.Wheat_AllergyCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Wheat Allergy", True))
-        Me.Wheat_AllergyCheckBox.Location = New System.Drawing.Point(484, 269)
-        Me.Wheat_AllergyCheckBox.Name = "Wheat_AllergyCheckBox"
-        Me.Wheat_AllergyCheckBox.Size = New System.Drawing.Size(104, 24)
-        Me.Wheat_AllergyCheckBox.TabIndex = 44
-        Me.Wheat_AllergyCheckBox.Text = "Wheat Allergy"
-        Me.Wheat_AllergyCheckBox.UseVisualStyleBackColor = True
+        Me.chkWheat.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Wheat Allergy", True))
+        Me.chkWheat.Location = New System.Drawing.Point(487, 339)
+        Me.chkWheat.Name = "chkWheat"
+        Me.chkWheat.Size = New System.Drawing.Size(104, 24)
+        Me.chkWheat.TabIndex = 44
+        Me.chkWheat.Text = "Wheat Allergy"
+        Me.chkWheat.UseVisualStyleBackColor = True
         '
         'btnBMI
         '
-        Me.btnBMI.Location = New System.Drawing.Point(227, 416)
+        Me.btnBMI.Location = New System.Drawing.Point(230, 486)
         Me.btnBMI.Name = "btnBMI"
         Me.btnBMI.Size = New System.Drawing.Size(157, 23)
         Me.btnBMI.TabIndex = 45
@@ -526,7 +528,7 @@ Partial Class NewProfiles
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(12, 42)
+        Me.lblTitle.Location = New System.Drawing.Point(15, 112)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(235, 36)
         Me.lblTitle.TabIndex = 46
@@ -536,34 +538,46 @@ Partial Class NewProfiles
         '
         Me.lblRestrictions.AutoSize = True
         Me.lblRestrictions.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRestrictions.Location = New System.Drawing.Point(353, 42)
+        Me.lblRestrictions.Location = New System.Drawing.Point(356, 112)
         Me.lblRestrictions.Name = "lblRestrictions"
         Me.lblRestrictions.Size = New System.Drawing.Size(172, 36)
         Me.lblRestrictions.TabIndex = 47
         Me.lblRestrictions.Text = "Restrictions"
         '
+        'lblWelcome
+        '
+        Me.lblWelcome.AutoSize = True
+        Me.lblWelcome.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblWelcome.Location = New System.Drawing.Point(135, 49)
+        Me.lblWelcome.Name = "lblWelcome"
+        Me.lblWelcome.Size = New System.Drawing.Size(359, 46)
+        Me.lblWelcome.TabIndex = 48
+        Me.lblWelcome.Text = "Welcome to Eat Fit"
+        '
         'NewProfiles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(629, 480)
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.ClientSize = New System.Drawing.Size(629, 561)
+        Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.lblRestrictions)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.btnBMI)
-        Me.Controls.Add(Me.Wheat_AllergyCheckBox)
-        Me.Controls.Add(Me.Lactose_AllergyCheckBox)
-        Me.Controls.Add(Me.Shellfish_AllergyCheckBox)
-        Me.Controls.Add(Me.Fish_AllergyCheckBox)
-        Me.Controls.Add(Me.Egg_AllergyCheckBox)
-        Me.Controls.Add(Me.Soy_AllergyCheckBox)
-        Me.Controls.Add(Me.Tree_Nut_AllergyCheckBox)
-        Me.Controls.Add(Me.Peanut_AllergyCheckBox)
+        Me.Controls.Add(Me.chkWheat)
+        Me.Controls.Add(Me.chkLactose)
+        Me.Controls.Add(Me.chkShellfish)
+        Me.Controls.Add(Me.chkFish)
+        Me.Controls.Add(Me.chkEgg)
+        Me.Controls.Add(Me.chkSoy)
+        Me.Controls.Add(Me.chkTreeNut)
+        Me.Controls.Add(Me.chkPeanut)
         Me.Controls.Add(lblBMI)
         Me.Controls.Add(Me.txtBMI)
-        Me.Controls.Add(Me.Gluten_FreeCheckBox)
-        Me.Controls.Add(Me.VeganCheckBox)
-        Me.Controls.Add(Me.VegetarianCheckBox)
-        Me.Controls.Add(Me.No_RestrictionsCheckBox)
+        Me.Controls.Add(Me.chkGlutenFree)
+        Me.Controls.Add(Me.chkVegan)
+        Me.Controls.Add(Me.chkVegetarian)
+        Me.Controls.Add(Me.chkNoRestrictions)
         Me.Controls.Add(lblGoalDate)
         Me.Controls.Add(Me.datGoalDate)
         Me.Controls.Add(lblGoalWeight)
@@ -583,8 +597,9 @@ Partial Class NewProfiles
         Me.Controls.Add(lblID)
         Me.Controls.Add(Me.txtID)
         Me.Controls.Add(Me.UserProfilesBindingNavigator)
+        Me.MaximizeBox = False
         Me.Name = "NewProfiles"
-        Me.Text = "NewProfiles"
+        Me.Text = "Eat Fit"
         CType(Me.EatFitDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UserProfilesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UserProfilesBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
@@ -621,20 +636,21 @@ Partial Class NewProfiles
     Friend WithEvents txtWeight As TextBox
     Friend WithEvents txtGoalWeight As TextBox
     Friend WithEvents datGoalDate As DateTimePicker
-    Friend WithEvents No_RestrictionsCheckBox As CheckBox
-    Friend WithEvents VegetarianCheckBox As CheckBox
-    Friend WithEvents VeganCheckBox As CheckBox
-    Friend WithEvents Gluten_FreeCheckBox As CheckBox
+    Friend WithEvents chkNoRestrictions As CheckBox
+    Friend WithEvents chkVegetarian As CheckBox
+    Friend WithEvents chkVegan As CheckBox
+    Friend WithEvents chkGlutenFree As CheckBox
     Friend WithEvents txtBMI As TextBox
-    Friend WithEvents Peanut_AllergyCheckBox As CheckBox
-    Friend WithEvents Tree_Nut_AllergyCheckBox As CheckBox
-    Friend WithEvents Soy_AllergyCheckBox As CheckBox
-    Friend WithEvents Egg_AllergyCheckBox As CheckBox
-    Friend WithEvents Fish_AllergyCheckBox As CheckBox
-    Friend WithEvents Shellfish_AllergyCheckBox As CheckBox
-    Friend WithEvents Lactose_AllergyCheckBox As CheckBox
-    Friend WithEvents Wheat_AllergyCheckBox As CheckBox
+    Friend WithEvents chkPeanut As CheckBox
+    Friend WithEvents chkTreeNut As CheckBox
+    Friend WithEvents chkSoy As CheckBox
+    Friend WithEvents chkEgg As CheckBox
+    Friend WithEvents chkFish As CheckBox
+    Friend WithEvents chkShellfish As CheckBox
+    Friend WithEvents chkLactose As CheckBox
+    Friend WithEvents chkWheat As CheckBox
     Friend WithEvents btnBMI As Button
     Friend WithEvents lblTitle As Label
     Friend WithEvents lblRestrictions As Label
+    Friend WithEvents lblWelcome As Label
 End Class
