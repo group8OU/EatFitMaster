@@ -63,6 +63,28 @@ Namespace My
                 Return CType(Me("EFDBConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\ProfileDatabase1.mdb"& _ 
+            "")>  _
+        Public ReadOnly Property ProfileDatabase1ConnectionString() As String
+            Get
+                Return CType(Me("ProfileDatabase1ConnectionString"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\EatFitDatabase.accd"& _ 
+            "b")>  _
+        Public ReadOnly Property EatFitDatabaseConnectionString() As String
+            Get
+                Return CType(Me("EatFitDatabaseConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
