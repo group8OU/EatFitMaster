@@ -24,32 +24,32 @@ Partial Class NewProfiles
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NewProfiles))
-        Dim lblID As System.Windows.Forms.Label
-        Dim lblFirstName As System.Windows.Forms.Label
-        Dim lblLastName As System.Windows.Forms.Label
-        Dim lblSex As System.Windows.Forms.Label
-        Dim lblAge As System.Windows.Forms.Label
-        Dim lblHeight As System.Windows.Forms.Label
-        Dim lblWeight As System.Windows.Forms.Label
-        Dim lblGoalWeight As System.Windows.Forms.Label
-        Dim lblGoalDate As System.Windows.Forms.Label
-        Dim lblBMI As System.Windows.Forms.Label
+        Me.lblID = New System.Windows.Forms.Label()
+        Me.lblFirstName = New System.Windows.Forms.Label()
+        Me.lblLastName = New System.Windows.Forms.Label()
+        Me.lblSex = New System.Windows.Forms.Label()
+        Me.lblAge = New System.Windows.Forms.Label()
+        Me.lblHeight = New System.Windows.Forms.Label()
+        Me.lblWeight = New System.Windows.Forms.Label()
+        Me.lblGoalWeight = New System.Windows.Forms.Label()
+        Me.lblGoalDate = New System.Windows.Forms.Label()
+        Me.lblBMI = New System.Windows.Forms.Label()
         Me.EatFitDatabaseDataSet = New WindowsApplication1.EatFitDatabaseDataSet()
         Me.UserProfilesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UserProfilesTableAdapter = New WindowsApplication1.EatFitDatabaseDataSetTableAdapters.UserProfilesTableAdapter()
         Me.TableAdapterManager = New WindowsApplication1.EatFitDatabaseDataSetTableAdapters.TableAdapterManager()
         Me.UserProfilesBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.UserProfilesBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.txtFirstName = New System.Windows.Forms.TextBox()
@@ -79,21 +79,101 @@ Partial Class NewProfiles
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.btnNext = New System.Windows.Forms.Button()
         Me.lblWarning = New System.Windows.Forms.Label()
-        lblID = New System.Windows.Forms.Label()
-        lblFirstName = New System.Windows.Forms.Label()
-        lblLastName = New System.Windows.Forms.Label()
-        lblSex = New System.Windows.Forms.Label()
-        lblAge = New System.Windows.Forms.Label()
-        lblHeight = New System.Windows.Forms.Label()
-        lblWeight = New System.Windows.Forms.Label()
-        lblGoalWeight = New System.Windows.Forms.Label()
-        lblGoalDate = New System.Windows.Forms.Label()
-        lblBMI = New System.Windows.Forms.Label()
         CType(Me.EatFitDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserProfilesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserProfilesBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UserProfilesBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'lblID
+        '
+        Me.lblID.AutoSize = True
+        Me.lblID.Location = New System.Drawing.Point(84, 168)
+        Me.lblID.Name = "lblID"
+        Me.lblID.Size = New System.Drawing.Size(21, 13)
+        Me.lblID.TabIndex = 1
+        Me.lblID.Text = "ID:"
+        '
+        'lblFirstName
+        '
+        Me.lblFirstName.AutoSize = True
+        Me.lblFirstName.Location = New System.Drawing.Point(45, 204)
+        Me.lblFirstName.Name = "lblFirstName"
+        Me.lblFirstName.Size = New System.Drawing.Size(60, 13)
+        Me.lblFirstName.TabIndex = 3
+        Me.lblFirstName.Text = "First Name:"
+        '
+        'lblLastName
+        '
+        Me.lblLastName.AutoSize = True
+        Me.lblLastName.Location = New System.Drawing.Point(44, 240)
+        Me.lblLastName.Name = "lblLastName"
+        Me.lblLastName.Size = New System.Drawing.Size(61, 13)
+        Me.lblLastName.TabIndex = 5
+        Me.lblLastName.Text = "Last Name:"
+        '
+        'lblSex
+        '
+        Me.lblSex.AutoSize = True
+        Me.lblSex.Location = New System.Drawing.Point(48, 276)
+        Me.lblSex.Name = "lblSex"
+        Me.lblSex.Size = New System.Drawing.Size(57, 13)
+        Me.lblSex.TabIndex = 7
+        Me.lblSex.Text = "Sex (M/F):"
+        '
+        'lblAge
+        '
+        Me.lblAge.AutoSize = True
+        Me.lblAge.Location = New System.Drawing.Point(76, 312)
+        Me.lblAge.Name = "lblAge"
+        Me.lblAge.Size = New System.Drawing.Size(29, 13)
+        Me.lblAge.TabIndex = 9
+        Me.lblAge.Text = "Age:"
+        '
+        'lblHeight
+        '
+        Me.lblHeight.AutoSize = True
+        Me.lblHeight.Location = New System.Drawing.Point(47, 348)
+        Me.lblHeight.Name = "lblHeight"
+        Me.lblHeight.Size = New System.Drawing.Size(58, 13)
+        Me.lblHeight.TabIndex = 11
+        Me.lblHeight.Text = "Height (in):"
+        '
+        'lblWeight
+        '
+        Me.lblWeight.AutoSize = True
+        Me.lblWeight.Location = New System.Drawing.Point(44, 384)
+        Me.lblWeight.Name = "lblWeight"
+        Me.lblWeight.Size = New System.Drawing.Size(61, 13)
+        Me.lblWeight.TabIndex = 13
+        Me.lblWeight.Text = "Weight (lb):"
+        '
+        'lblGoalWeight
+        '
+        Me.lblGoalWeight.AutoSize = True
+        Me.lblGoalWeight.Location = New System.Drawing.Point(36, 420)
+        Me.lblGoalWeight.Name = "lblGoalWeight"
+        Me.lblGoalWeight.Size = New System.Drawing.Size(69, 13)
+        Me.lblGoalWeight.TabIndex = 15
+        Me.lblGoalWeight.Text = "Goal Weight:"
+        '
+        'lblGoalDate
+        '
+        Me.lblGoalDate.AutoSize = True
+        Me.lblGoalDate.Location = New System.Drawing.Point(47, 456)
+        Me.lblGoalDate.Name = "lblGoalDate"
+        Me.lblGoalDate.Size = New System.Drawing.Size(58, 13)
+        Me.lblGoalDate.TabIndex = 17
+        Me.lblGoalDate.Text = "Goal Date:"
+        '
+        'lblBMI
+        '
+        Me.lblBMI.AutoSize = True
+        Me.lblBMI.Location = New System.Drawing.Point(76, 492)
+        Me.lblBMI.Name = "lblBMI"
+        Me.lblBMI.Size = New System.Drawing.Size(29, 13)
+        Me.lblBMI.TabIndex = 27
+        Me.lblBMI.Text = "BMI:"
         '
         'EatFitDatabaseDataSet
         '
@@ -133,6 +213,31 @@ Partial Class NewProfiles
         Me.UserProfilesBindingNavigator.TabIndex = 0
         Me.UserProfilesBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -165,16 +270,9 @@ Partial Class NewProfiles
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -197,26 +295,8 @@ Partial Class NewProfiles
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'UserProfilesBindingNavigatorSaveItem
         '
@@ -225,15 +305,6 @@ Partial Class NewProfiles
         Me.UserProfilesBindingNavigatorSaveItem.Name = "UserProfilesBindingNavigatorSaveItem"
         Me.UserProfilesBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.UserProfilesBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'lblID
-        '
-        lblID.AutoSize = True
-        lblID.Location = New System.Drawing.Point(84, 168)
-        lblID.Name = "lblID"
-        lblID.Size = New System.Drawing.Size(21, 13)
-        lblID.TabIndex = 1
-        lblID.Text = "ID:"
         '
         'txtID
         '
@@ -244,15 +315,6 @@ Partial Class NewProfiles
         Me.txtID.Size = New System.Drawing.Size(100, 20)
         Me.txtID.TabIndex = 2
         '
-        'lblFirstName
-        '
-        lblFirstName.AutoSize = True
-        lblFirstName.Location = New System.Drawing.Point(45, 204)
-        lblFirstName.Name = "lblFirstName"
-        lblFirstName.Size = New System.Drawing.Size(60, 13)
-        lblFirstName.TabIndex = 3
-        lblFirstName.Text = "First Name:"
-        '
         'txtFirstName
         '
         Me.txtFirstName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "First Name", True))
@@ -260,15 +322,6 @@ Partial Class NewProfiles
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(100, 20)
         Me.txtFirstName.TabIndex = 4
-        '
-        'lblLastName
-        '
-        lblLastName.AutoSize = True
-        lblLastName.Location = New System.Drawing.Point(44, 240)
-        lblLastName.Name = "lblLastName"
-        lblLastName.Size = New System.Drawing.Size(61, 13)
-        lblLastName.TabIndex = 5
-        lblLastName.Text = "Last Name:"
         '
         'txtLastName
         '
@@ -278,15 +331,6 @@ Partial Class NewProfiles
         Me.txtLastName.Size = New System.Drawing.Size(100, 20)
         Me.txtLastName.TabIndex = 6
         '
-        'lblSex
-        '
-        lblSex.AutoSize = True
-        lblSex.Location = New System.Drawing.Point(48, 276)
-        lblSex.Name = "lblSex"
-        lblSex.Size = New System.Drawing.Size(57, 13)
-        lblSex.TabIndex = 7
-        lblSex.Text = "Sex (M/F):"
-        '
         'txtSex
         '
         Me.txtSex.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Sex (M/F)", True))
@@ -294,15 +338,6 @@ Partial Class NewProfiles
         Me.txtSex.Name = "txtSex"
         Me.txtSex.Size = New System.Drawing.Size(100, 20)
         Me.txtSex.TabIndex = 8
-        '
-        'lblAge
-        '
-        lblAge.AutoSize = True
-        lblAge.Location = New System.Drawing.Point(76, 312)
-        lblAge.Name = "lblAge"
-        lblAge.Size = New System.Drawing.Size(29, 13)
-        lblAge.TabIndex = 9
-        lblAge.Text = "Age:"
         '
         'txtAge
         '
@@ -312,15 +347,6 @@ Partial Class NewProfiles
         Me.txtAge.Size = New System.Drawing.Size(100, 20)
         Me.txtAge.TabIndex = 10
         '
-        'lblHeight
-        '
-        lblHeight.AutoSize = True
-        lblHeight.Location = New System.Drawing.Point(47, 348)
-        lblHeight.Name = "lblHeight"
-        lblHeight.Size = New System.Drawing.Size(58, 13)
-        lblHeight.TabIndex = 11
-        lblHeight.Text = "Height (in):"
-        '
         'txtHeight
         '
         Me.txtHeight.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Height (in)", True))
@@ -328,15 +354,6 @@ Partial Class NewProfiles
         Me.txtHeight.Name = "txtHeight"
         Me.txtHeight.Size = New System.Drawing.Size(100, 20)
         Me.txtHeight.TabIndex = 12
-        '
-        'lblWeight
-        '
-        lblWeight.AutoSize = True
-        lblWeight.Location = New System.Drawing.Point(44, 384)
-        lblWeight.Name = "lblWeight"
-        lblWeight.Size = New System.Drawing.Size(61, 13)
-        lblWeight.TabIndex = 13
-        lblWeight.Text = "Weight (lb):"
         '
         'txtWeight
         '
@@ -346,15 +363,6 @@ Partial Class NewProfiles
         Me.txtWeight.Size = New System.Drawing.Size(100, 20)
         Me.txtWeight.TabIndex = 14
         '
-        'lblGoalWeight
-        '
-        lblGoalWeight.AutoSize = True
-        lblGoalWeight.Location = New System.Drawing.Point(36, 420)
-        lblGoalWeight.Name = "lblGoalWeight"
-        lblGoalWeight.Size = New System.Drawing.Size(69, 13)
-        lblGoalWeight.TabIndex = 15
-        lblGoalWeight.Text = "Goal Weight:"
-        '
         'txtGoalWeight
         '
         Me.txtGoalWeight.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Goal Weight", True))
@@ -362,15 +370,6 @@ Partial Class NewProfiles
         Me.txtGoalWeight.Name = "txtGoalWeight"
         Me.txtGoalWeight.Size = New System.Drawing.Size(100, 20)
         Me.txtGoalWeight.TabIndex = 16
-        '
-        'lblGoalDate
-        '
-        lblGoalDate.AutoSize = True
-        lblGoalDate.Location = New System.Drawing.Point(47, 456)
-        lblGoalDate.Name = "lblGoalDate"
-        lblGoalDate.Size = New System.Drawing.Size(58, 13)
-        lblGoalDate.TabIndex = 17
-        lblGoalDate.Text = "Goal Date:"
         '
         'datGoalDate
         '
@@ -420,20 +419,12 @@ Partial Class NewProfiles
         Me.chkGlutenFree.Text = "Gluten Free"
         Me.chkGlutenFree.UseVisualStyleBackColor = True
         '
-        'lblBMI
-        '
-        lblBMI.AutoSize = True
-        lblBMI.Location = New System.Drawing.Point(76, 492)
-        lblBMI.Name = "lblBMI"
-        lblBMI.Size = New System.Drawing.Size(29, 13)
-        lblBMI.TabIndex = 27
-        lblBMI.Text = "BMI:"
-        '
         'txtBMI
         '
         Me.txtBMI.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "BMI", True))
         Me.txtBMI.Location = New System.Drawing.Point(124, 488)
         Me.txtBMI.Name = "txtBMI"
+        Me.txtBMI.ReadOnly = True
         Me.txtBMI.Size = New System.Drawing.Size(100, 20)
         Me.txtBMI.TabIndex = 28
         '
@@ -594,29 +585,29 @@ Partial Class NewProfiles
         Me.Controls.Add(Me.chkSoy)
         Me.Controls.Add(Me.chkTreeNut)
         Me.Controls.Add(Me.chkPeanut)
-        Me.Controls.Add(lblBMI)
+        Me.Controls.Add(Me.lblBMI)
         Me.Controls.Add(Me.txtBMI)
         Me.Controls.Add(Me.chkGlutenFree)
         Me.Controls.Add(Me.chkVegan)
         Me.Controls.Add(Me.chkVegetarian)
         Me.Controls.Add(Me.chkNoRestrictions)
-        Me.Controls.Add(lblGoalDate)
+        Me.Controls.Add(Me.lblGoalDate)
         Me.Controls.Add(Me.datGoalDate)
-        Me.Controls.Add(lblGoalWeight)
+        Me.Controls.Add(Me.lblGoalWeight)
         Me.Controls.Add(Me.txtGoalWeight)
-        Me.Controls.Add(lblWeight)
+        Me.Controls.Add(Me.lblWeight)
         Me.Controls.Add(Me.txtWeight)
-        Me.Controls.Add(lblHeight)
+        Me.Controls.Add(Me.lblHeight)
         Me.Controls.Add(Me.txtHeight)
-        Me.Controls.Add(lblAge)
+        Me.Controls.Add(Me.lblAge)
         Me.Controls.Add(Me.txtAge)
-        Me.Controls.Add(lblSex)
+        Me.Controls.Add(Me.lblSex)
         Me.Controls.Add(Me.txtSex)
-        Me.Controls.Add(lblLastName)
+        Me.Controls.Add(Me.lblLastName)
         Me.Controls.Add(Me.txtLastName)
-        Me.Controls.Add(lblFirstName)
+        Me.Controls.Add(Me.lblFirstName)
         Me.Controls.Add(Me.txtFirstName)
-        Me.Controls.Add(lblID)
+        Me.Controls.Add(Me.lblID)
         Me.Controls.Add(Me.txtID)
         Me.Controls.Add(Me.UserProfilesBindingNavigator)
         Me.MaximizeBox = False
@@ -677,4 +668,14 @@ Partial Class NewProfiles
     Friend WithEvents lblWelcome As Label
     Friend WithEvents btnNext As Button
     Friend WithEvents lblWarning As Label
+    Friend WithEvents lblID As Label
+    Friend WithEvents lblFirstName As Label
+    Friend WithEvents lblLastName As Label
+    Friend WithEvents lblSex As Label
+    Friend WithEvents lblAge As Label
+    Friend WithEvents lblHeight As Label
+    Friend WithEvents lblWeight As Label
+    Friend WithEvents lblGoalWeight As Label
+    Friend WithEvents lblGoalDate As Label
+    Friend WithEvents lblBMI As Label
 End Class
