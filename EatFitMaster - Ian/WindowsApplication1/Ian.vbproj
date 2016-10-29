@@ -104,6 +104,11 @@
     <Compile Include="Breakfast.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EatFitDatabaseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EatFitDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Login.designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -180,6 +185,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="EatFitDatabaseDataSet.xsc">
+      <DependentUpon>EatFitDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EatFitDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EatFitDatabaseDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EatFitDatabaseDataSet.xss">
+      <DependentUpon>EatFitDatabaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -193,6 +209,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\customer-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EatFitDatabase.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
