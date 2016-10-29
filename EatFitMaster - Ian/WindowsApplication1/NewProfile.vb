@@ -11,4 +11,12 @@
         Me.UserProfilesTableAdapter.Fill(Me.EatFitDatabaseDataSet.UserProfiles)
 
     End Sub
+
+    Private Sub VegetarianCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles chkVegetarian.CheckedChanged
+        If chek Then
+    End Sub
+
+    Private Sub Goal_DateLabel_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class
