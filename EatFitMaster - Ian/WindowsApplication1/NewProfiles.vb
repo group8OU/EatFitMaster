@@ -13,6 +13,12 @@
     End Sub
 
     Private Sub btnBMI_Click(sender As Object, e As EventArgs) Handles btnBMI.Click
+        chkEgg.
+    End Sub
 
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        frmWelcome.Text = "Welcome, " & txtFirstName.Text & ", to Eat Fit!"
+        frmWelcome.Show()
+        Me.Close()
     End Sub
 End Class

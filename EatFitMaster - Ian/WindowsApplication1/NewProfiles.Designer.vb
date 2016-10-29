@@ -77,6 +77,8 @@ Partial Class NewProfiles
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.lblRestrictions = New System.Windows.Forms.Label()
         Me.lblWelcome = New System.Windows.Forms.Label()
+        Me.btnNext = New System.Windows.Forms.Button()
+        Me.lblWarning = New System.Windows.Forms.Label()
         lblID = New System.Windows.Forms.Label()
         lblFirstName = New System.Windows.Forms.Label()
         lblLastName = New System.Windows.Forms.Label()
@@ -554,12 +556,32 @@ Partial Class NewProfiles
         Me.lblWelcome.TabIndex = 48
         Me.lblWelcome.Text = "Welcome to Eat Fit"
         '
+        'btnNext
+        '
+        Me.btnNext.Location = New System.Drawing.Point(479, 504)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(138, 45)
+        Me.btnNext.TabIndex = 49
+        Me.btnNext.Text = "Next"
+        Me.btnNext.UseVisualStyleBackColor = True
+        '
+        'lblWarning
+        '
+        Me.lblWarning.AutoSize = True
+        Me.lblWarning.Location = New System.Drawing.Point(425, 486)
+        Me.lblWarning.Name = "lblWarning"
+        Me.lblWarning.Size = New System.Drawing.Size(204, 13)
+        Me.lblWarning.TabIndex = 50
+        Me.lblWarning.Text = "***Make sure you save before advancing."
+        '
         'NewProfiles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(629, 561)
+        Me.Controls.Add(Me.lblWarning)
+        Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.lblRestrictions)
         Me.Controls.Add(Me.lblTitle)
@@ -653,4 +675,6 @@ Partial Class NewProfiles
     Friend WithEvents lblTitle As Label
     Friend WithEvents lblRestrictions As Label
     Friend WithEvents lblWelcome As Label
+    Friend WithEvents btnNext As Button
+    Friend WithEvents lblWarning As Label
 End Class
