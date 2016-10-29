@@ -325,6 +325,8 @@ Partial Public Class EatFitDatabaseDataSet
         
         Private columnWheat_Allergy As Global.System.Data.DataColumn
         
+        Private columnBMI As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -529,6 +531,14 @@ Partial Public Class EatFitDatabaseDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property BMIColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnBMI
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -585,9 +595,10 @@ Partial Public Class EatFitDatabaseDataSet
                     ByVal Fish_Allergy As Boolean,  _
                     ByVal Shellfish_Allergy As Boolean,  _
                     ByVal Lactose_Allergy As Boolean,  _
-                    ByVal Wheat_Allergy As Boolean) As UserProfilesRow
+                    ByVal Wheat_Allergy As Boolean,  _
+                    ByVal BMI As Integer) As UserProfilesRow
             Dim rowUserProfilesRow As UserProfilesRow = CType(Me.NewRow,UserProfilesRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, First_Name, Last_Name, _Sex__M_F_, Age, _Height__in_, _Weight__lb_, Goal_Weight, Goal_Date, No_Restrictions, Vegetarian, Vegan, Gluten_Free, Peanut_Allergy, Tree_Nut_Allergy, Soy_Allergy, Egg_Allergy, Fish_Allergy, Shellfish_Allergy, Lactose_Allergy, Wheat_Allergy}
+            Dim columnValuesArray() As Object = New Object() {Nothing, First_Name, Last_Name, _Sex__M_F_, Age, _Height__in_, _Weight__lb_, Goal_Weight, Goal_Date, No_Restrictions, Vegetarian, Vegan, Gluten_Free, Peanut_Allergy, Tree_Nut_Allergy, Soy_Allergy, Egg_Allergy, Fish_Allergy, Shellfish_Allergy, Lactose_Allergy, Wheat_Allergy, BMI}
             rowUserProfilesRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowUserProfilesRow)
             Return rowUserProfilesRow
@@ -637,6 +648,7 @@ Partial Public Class EatFitDatabaseDataSet
             Me.columnShellfish_Allergy = MyBase.Columns("Shellfish Allergy")
             Me.columnLactose_Allergy = MyBase.Columns("Lactose Allergy")
             Me.columnWheat_Allergy = MyBase.Columns("Wheat Allergy")
+            Me.columnBMI = MyBase.Columns("BMI")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -690,6 +702,8 @@ Partial Public Class EatFitDatabaseDataSet
             MyBase.Columns.Add(Me.columnLactose_Allergy)
             Me.columnWheat_Allergy = New Global.System.Data.DataColumn("Wheat Allergy", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnWheat_Allergy)
+            Me.columnBMI = New Global.System.Data.DataColumn("BMI", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnBMI)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
             Me.columnID.AutoIncrement = true
             Me.columnID.AutoIncrementSeed = -1
@@ -1156,6 +1170,21 @@ Partial Public Class EatFitDatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property BMI() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableUserProfiles.BMIColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'BMI' in table 'UserProfiles' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableUserProfiles.BMIColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsFirst_NameNull() As Boolean
             Return Me.IsNull(Me.tableUserProfiles.First_NameColumn)
         End Function
@@ -1393,6 +1422,18 @@ Partial Public Class EatFitDatabaseDataSet
         Public Sub SetWheat_AllergyNull()
             Me(Me.tableUserProfiles.Wheat_AllergyColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsBMINull() As Boolean
+            Return Me.IsNull(Me.tableUserProfiles.BMIColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetBMINull()
+            Me(Me.tableUserProfiles.BMIColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -1582,6 +1623,7 @@ Namespace EatFitDatabaseDataSetTableAdapters
             tableMapping.ColumnMappings.Add("Shellfish Allergy", "Shellfish Allergy")
             tableMapping.ColumnMappings.Add("Lactose Allergy", "Lactose Allergy")
             tableMapping.ColumnMappings.Add("Wheat Allergy", "Wheat Allergy")
+            tableMapping.ColumnMappings.Add("BMI", "BMI")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -1601,7 +1643,7 @@ Namespace EatFitDatabaseDataSetTableAdapters
                 "= 1 AND `Fish Allergy` IS NULL) OR (`Fish Allergy` = ?)) AND ((? = 1 AND `Shellf"& _ 
                 "ish Allergy` IS NULL) OR (`Shellfish Allergy` = ?)) AND ((? = 1 AND `Lactose All"& _ 
                 "ergy` IS NULL) OR (`Lactose Allergy` = ?)) AND ((? = 1 AND `Wheat Allergy` IS NU"& _ 
-                "LL) OR (`Wheat Allergy` = ?)))"
+                "LL) OR (`Wheat Allergy` = ?)) AND ((? = 1 AND `BMI` IS NULL) OR (`BMI` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_First_Name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "First Name", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -1644,13 +1686,16 @@ Namespace EatFitDatabaseDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Lactose_Allergy", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Lactose Allergy", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Wheat_Allergy", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Wheat Allergy", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Wheat_Allergy", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Wheat Allergy", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_BMI", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BMI", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_BMI", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BMI", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `UserProfiles` (`First Name`, `Last Name`, `Sex (M/F)`, `Age`, `Heigh"& _ 
                 "t (in)`, `Weight (lb)`, `Goal Weight`, `Goal Date`, `No Restrictions`, `Vegetari"& _ 
                 "an`, `Vegan`, `Gluten Free`, `Peanut Allergy`, `Tree Nut Allergy`, `Soy Allergy`"& _ 
                 ", `Egg Allergy`, `Fish Allergy`, `Shellfish Allergy`, `Lactose Allergy`, `Wheat "& _ 
-                "Allergy`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                "Allergy`, `BMI`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"& _ 
+                ", ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("First_Name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "First Name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Last_Name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Last Name", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -1672,6 +1717,7 @@ Namespace EatFitDatabaseDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Shellfish_Allergy", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Shellfish Allergy", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Lactose_Allergy", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Lactose Allergy", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Wheat_Allergy", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Wheat Allergy", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("BMI", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BMI", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `UserProfiles` SET `First Name` = ?, `Last Name` = ?, `Sex (M/F)` = ?, `Ag"& _ 
@@ -1679,23 +1725,23 @@ Namespace EatFitDatabaseDataSetTableAdapters
                 ", `No Restrictions` = ?, `Vegetarian` = ?, `Vegan` = ?, `Gluten Free` = ?, `Pean"& _ 
                 "ut Allergy` = ?, `Tree Nut Allergy` = ?, `Soy Allergy` = ?, `Egg Allergy` = ?, `"& _ 
                 "Fish Allergy` = ?, `Shellfish Allergy` = ?, `Lactose Allergy` = ?, `Wheat Allerg"& _ 
-                "y` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `First Name` IS NULL) OR (`First Name` "& _ 
-                "= ?)) AND ((? = 1 AND `Last Name` IS NULL) OR (`Last Name` = ?)) AND ((? = 1 AND"& _ 
-                " `Sex (M/F)` IS NULL) OR (`Sex (M/F)` = ?)) AND ((? = 1 AND `Age` IS NULL) OR (`"& _ 
-                "Age` = ?)) AND ((? = 1 AND `Height (in)` IS NULL) OR (`Height (in)` = ?)) AND (("& _ 
-                "? = 1 AND `Weight (lb)` IS NULL) OR (`Weight (lb)` = ?)) AND ((? = 1 AND `Goal W"& _ 
-                "eight` IS NULL) OR (`Goal Weight` = ?)) AND ((? = 1 AND `Goal Date` IS NULL) OR "& _ 
-                "(`Goal Date` = ?)) AND ((? = 1 AND `No Restrictions` IS NULL) OR (`No Restrictio"& _ 
-                "ns` = ?)) AND ((? = 1 AND `Vegetarian` IS NULL) OR (`Vegetarian` = ?)) AND ((? ="& _ 
-                " 1 AND `Vegan` IS NULL) OR (`Vegan` = ?)) AND ((? = 1 AND `Gluten Free` IS NULL)"& _ 
-                " OR (`Gluten Free` = ?)) AND ((? = 1 AND `Peanut Allergy` IS NULL) OR (`Peanut A"& _ 
-                "llergy` = ?)) AND ((? = 1 AND `Tree Nut Allergy` IS NULL) OR (`Tree Nut Allergy`"& _ 
-                " = ?)) AND ((? = 1 AND `Soy Allergy` IS NULL) OR (`Soy Allergy` = ?)) AND ((? = "& _ 
-                "1 AND `Egg Allergy` IS NULL) OR (`Egg Allergy` = ?)) AND ((? = 1 AND `Fish Aller"& _ 
-                "gy` IS NULL) OR (`Fish Allergy` = ?)) AND ((? = 1 AND `Shellfish Allergy` IS NUL"& _ 
-                "L) OR (`Shellfish Allergy` = ?)) AND ((? = 1 AND `Lactose Allergy` IS NULL) OR ("& _ 
-                "`Lactose Allergy` = ?)) AND ((? = 1 AND `Wheat Allergy` IS NULL) OR (`Wheat Alle"& _ 
-                "rgy` = ?)))"
+                "y` = ?, `BMI` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `First Name` IS NULL) OR (`F"& _ 
+                "irst Name` = ?)) AND ((? = 1 AND `Last Name` IS NULL) OR (`Last Name` = ?)) AND "& _ 
+                "((? = 1 AND `Sex (M/F)` IS NULL) OR (`Sex (M/F)` = ?)) AND ((? = 1 AND `Age` IS "& _ 
+                "NULL) OR (`Age` = ?)) AND ((? = 1 AND `Height (in)` IS NULL) OR (`Height (in)` ="& _ 
+                " ?)) AND ((? = 1 AND `Weight (lb)` IS NULL) OR (`Weight (lb)` = ?)) AND ((? = 1 "& _ 
+                "AND `Goal Weight` IS NULL) OR (`Goal Weight` = ?)) AND ((? = 1 AND `Goal Date` I"& _ 
+                "S NULL) OR (`Goal Date` = ?)) AND ((? = 1 AND `No Restrictions` IS NULL) OR (`No"& _ 
+                " Restrictions` = ?)) AND ((? = 1 AND `Vegetarian` IS NULL) OR (`Vegetarian` = ?)"& _ 
+                ") AND ((? = 1 AND `Vegan` IS NULL) OR (`Vegan` = ?)) AND ((? = 1 AND `Gluten Fre"& _ 
+                "e` IS NULL) OR (`Gluten Free` = ?)) AND ((? = 1 AND `Peanut Allergy` IS NULL) OR"& _ 
+                " (`Peanut Allergy` = ?)) AND ((? = 1 AND `Tree Nut Allergy` IS NULL) OR (`Tree N"& _ 
+                "ut Allergy` = ?)) AND ((? = 1 AND `Soy Allergy` IS NULL) OR (`Soy Allergy` = ?))"& _ 
+                " AND ((? = 1 AND `Egg Allergy` IS NULL) OR (`Egg Allergy` = ?)) AND ((? = 1 AND "& _ 
+                "`Fish Allergy` IS NULL) OR (`Fish Allergy` = ?)) AND ((? = 1 AND `Shellfish Alle"& _ 
+                "rgy` IS NULL) OR (`Shellfish Allergy` = ?)) AND ((? = 1 AND `Lactose Allergy` IS"& _ 
+                " NULL) OR (`Lactose Allergy` = ?)) AND ((? = 1 AND `Wheat Allergy` IS NULL) OR ("& _ 
+                "`Wheat Allergy` = ?)) AND ((? = 1 AND `BMI` IS NULL) OR (`BMI` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("First_Name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "First Name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Last_Name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Last Name", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -1717,6 +1763,7 @@ Namespace EatFitDatabaseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Shellfish_Allergy", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Shellfish Allergy", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Lactose_Allergy", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Lactose Allergy", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Wheat_Allergy", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Wheat Allergy", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("BMI", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BMI", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_First_Name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "First Name", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_First_Name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "First Name", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -1758,6 +1805,8 @@ Namespace EatFitDatabaseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Lactose_Allergy", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Lactose Allergy", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Wheat_Allergy", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Wheat Allergy", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Wheat_Allergy", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Wheat Allergy", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_BMI", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BMI", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_BMI", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BMI", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1776,8 +1825,8 @@ Namespace EatFitDatabaseDataSetTableAdapters
             Me._commandCollection(0).CommandText = "SELECT ID, [First Name], [Last Name], [Sex (M/F)], Age, [Height (in)], [Weight (l"& _ 
                 "b)], [Goal Weight], [Goal Date], [No Restrictions], Vegetarian, Vegan, [Gluten F"& _ 
                 "ree], [Peanut Allergy], [Tree Nut Allergy], [Soy Allergy], [Egg Allergy], [Fish "& _ 
-                "Allergy], [Shellfish Allergy], [Lactose Allergy], [Wheat Allergy] FROM UserProfi"& _ 
-                "les"
+                "Allergy], [Shellfish Allergy], [Lactose Allergy], [Wheat Allergy], BMI FROM User"& _ 
+                "Profiles"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -1858,7 +1907,8 @@ Namespace EatFitDatabaseDataSetTableAdapters
                     ByVal Original_Fish_Allergy As Boolean,  _
                     ByVal Original_Shellfish_Allergy As Boolean,  _
                     ByVal Original_Lactose_Allergy As Boolean,  _
-                    ByVal Original_Wheat_Allergy As Boolean) As Integer
+                    ByVal Original_Wheat_Allergy As Boolean,  _
+                    ByVal Original_BMI As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
             If (Original_First_Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_First_Name")
@@ -1937,6 +1987,13 @@ Namespace EatFitDatabaseDataSetTableAdapters
             Me.Adapter.DeleteCommand.Parameters(38).Value = CType(Original_Lactose_Allergy,Boolean)
             Me.Adapter.DeleteCommand.Parameters(39).Value = CType(0,Object)
             Me.Adapter.DeleteCommand.Parameters(40).Value = CType(Original_Wheat_Allergy,Boolean)
+            If (Original_BMI.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(42).Value = CType(Original_BMI.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(42).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -1976,7 +2033,8 @@ Namespace EatFitDatabaseDataSetTableAdapters
                     ByVal Fish_Allergy As Boolean,  _
                     ByVal Shellfish_Allergy As Boolean,  _
                     ByVal Lactose_Allergy As Boolean,  _
-                    ByVal Wheat_Allergy As Boolean) As Integer
+                    ByVal Wheat_Allergy As Boolean,  _
+                    ByVal BMI As Global.System.Nullable(Of Integer)) As Integer
             If (First_Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("First_Name")
             Else
@@ -2029,6 +2087,11 @@ Namespace EatFitDatabaseDataSetTableAdapters
             Me.Adapter.InsertCommand.Parameters(17).Value = CType(Shellfish_Allergy,Boolean)
             Me.Adapter.InsertCommand.Parameters(18).Value = CType(Lactose_Allergy,Boolean)
             Me.Adapter.InsertCommand.Parameters(19).Value = CType(Wheat_Allergy,Boolean)
+            If (BMI.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(20).Value = CType(BMI.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -2069,6 +2132,7 @@ Namespace EatFitDatabaseDataSetTableAdapters
                     ByVal Shellfish_Allergy As Boolean,  _
                     ByVal Lactose_Allergy As Boolean,  _
                     ByVal Wheat_Allergy As Boolean,  _
+                    ByVal BMI As Global.System.Nullable(Of Integer),  _
                     ByVal Original_ID As Integer,  _
                     ByVal Original_First_Name As String,  _
                     ByVal Original_Last_Name As String,  _
@@ -2089,7 +2153,8 @@ Namespace EatFitDatabaseDataSetTableAdapters
                     ByVal Original_Fish_Allergy As Boolean,  _
                     ByVal Original_Shellfish_Allergy As Boolean,  _
                     ByVal Original_Lactose_Allergy As Boolean,  _
-                    ByVal Original_Wheat_Allergy As Boolean) As Integer
+                    ByVal Original_Wheat_Allergy As Boolean,  _
+                    ByVal Original_BMI As Global.System.Nullable(Of Integer)) As Integer
             If (First_Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("First_Name")
             Else
@@ -2142,84 +2207,96 @@ Namespace EatFitDatabaseDataSetTableAdapters
             Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Shellfish_Allergy,Boolean)
             Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Lactose_Allergy,Boolean)
             Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Wheat_Allergy,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_ID,Integer)
+            If (BMI.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(BMI.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_ID,Integer)
             If (Original_First_Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_First_Name")
             Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_First_Name,String)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_First_Name,String)
             End If
             If (Original_Last_Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Last_Name")
             Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_Last_Name,String)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_Last_Name,String)
             End If
             If (_Original_Sex__M_F_ Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("_Original_Sex__M_F_")
             Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(_Original_Sex__M_F_,String)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(_Original_Sex__M_F_,String)
             End If
             If (Original_Age.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_Age.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_Age.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
             End If
             If (_Original_Height__in_.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(_Original_Height__in_.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(_Original_Height__in_.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
             End If
             If (_Original_Weight__lb_.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(_Original_Weight__lb_.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(_Original_Weight__lb_.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
             End If
             If (Original_Goal_Weight.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_Goal_Weight.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_Goal_Weight.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
             End If
             If (Original_Goal_Date.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_Goal_Date.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(Original_Goal_Date.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(37).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_No_Restrictions,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(39).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_Vegetarian,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(41).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_Vegan,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(43).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(44).Value = CType(Original_Gluten_Free,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(45).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(46).Value = CType(Original_Peanut_Allergy,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(47).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(48).Value = CType(Original_Tree_Nut_Allergy,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(49).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(50).Value = CType(Original_Soy_Allergy,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(51).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(52).Value = CType(Original_Egg_Allergy,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(53).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(54).Value = CType(Original_Fish_Allergy,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(55).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(56).Value = CType(Original_Shellfish_Allergy,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(57).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(58).Value = CType(Original_Lactose_Allergy,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(59).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(60).Value = CType(Original_Wheat_Allergy,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(38).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(39).Value = CType(Original_No_Restrictions,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(40).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(41).Value = CType(Original_Vegetarian,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(42).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(43).Value = CType(Original_Vegan,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(44).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(45).Value = CType(Original_Gluten_Free,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(46).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(47).Value = CType(Original_Peanut_Allergy,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(48).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(49).Value = CType(Original_Tree_Nut_Allergy,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(50).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(51).Value = CType(Original_Soy_Allergy,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(52).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(53).Value = CType(Original_Egg_Allergy,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(54).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(55).Value = CType(Original_Fish_Allergy,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(56).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(57).Value = CType(Original_Shellfish_Allergy,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(58).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(59).Value = CType(Original_Lactose_Allergy,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(60).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(61).Value = CType(Original_Wheat_Allergy,Boolean)
+            If (Original_BMI.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(Original_BMI.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(63).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then

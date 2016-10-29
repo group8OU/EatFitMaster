@@ -68,6 +68,11 @@
             basic_errorflag = True
         End If
     End Sub
+
+    Private Sub txtBMI_TextChanged(sender As Object, e As EventArgs) Handles txtBMI.TextChanged
+
+    End Sub
+
     Private Sub checkBMI()
         'check/calculate BMI
         If IsNumeric(txtBMI.Text) Then

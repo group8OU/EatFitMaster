@@ -115,10 +115,10 @@
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewProfile.Designer.vb">
-      <DependentUpon>NewProfile.vb</DependentUpon>
+    <Compile Include="NewProfiles.Designer.vb">
+      <DependentUpon>NewProfiles.vb</DependentUpon>
     </Compile>
-    <Compile Include="NewProfile.vb">
+    <Compile Include="NewProfiles.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Snack.Designer.vb">
@@ -168,8 +168,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewProfile.resx">
-      <DependentUpon>NewProfile.vb</DependentUpon>
+    <EmbeddedResource Include="NewProfiles.resx">
+      <DependentUpon>NewProfiles.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Snack.resx">
       <DependentUpon>Snack.vb</DependentUpon>
