@@ -314,6 +314,7 @@ Partial Class NewProfiles
         Me.txtID.ReadOnly = True
         Me.txtID.Size = New System.Drawing.Size(100, 20)
         Me.txtID.TabIndex = 2
+        Me.txtID.TabStop = False
         '
         'txtFirstName
         '
@@ -521,7 +522,7 @@ Partial Class NewProfiles
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(15, 112)
+        Me.lblTitle.Location = New System.Drawing.Point(33, 112)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(235, 36)
         Me.lblTitle.TabIndex = 46
@@ -531,7 +532,7 @@ Partial Class NewProfiles
         '
         Me.lblRestrictions.AutoSize = True
         Me.lblRestrictions.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRestrictions.Location = New System.Drawing.Point(356, 112)
+        Me.lblRestrictions.Location = New System.Drawing.Point(386, 112)
         Me.lblRestrictions.Name = "lblRestrictions"
         Me.lblRestrictions.Size = New System.Drawing.Size(172, 36)
         Me.lblRestrictions.TabIndex = 47

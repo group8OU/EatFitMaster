@@ -30,6 +30,7 @@
         If radFemale.Checked Then
             basic_sex = "Female"
             basic_errorflag = False
+
         ElseIf radMale.Checked Then
             basic_sex = "Male"
             basic_errorflag = False
