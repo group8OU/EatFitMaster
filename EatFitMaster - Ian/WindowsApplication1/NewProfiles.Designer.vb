@@ -78,7 +78,9 @@ Partial Class NewProfiles
         Me.lblRestrictions = New System.Windows.Forms.Label()
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.btnNext = New System.Windows.Forms.Button()
-        Me.lblWarning = New System.Windows.Forms.Label()
+        Me.btnNewUser = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnReturningUser = New System.Windows.Forms.Button()
         CType(Me.EatFitDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserProfilesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserProfilesBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -309,6 +311,7 @@ Partial Class NewProfiles
         'txtID
         '
         Me.txtID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "ID", True))
+        Me.txtID.Enabled = False
         Me.txtID.Location = New System.Drawing.Point(124, 164)
         Me.txtID.Name = "txtID"
         Me.txtID.ReadOnly = True
@@ -319,62 +322,77 @@ Partial Class NewProfiles
         'txtFirstName
         '
         Me.txtFirstName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "First Name", True))
+        Me.txtFirstName.Enabled = False
         Me.txtFirstName.Location = New System.Drawing.Point(124, 200)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(100, 20)
         Me.txtFirstName.TabIndex = 4
+        Me.txtFirstName.TabStop = False
         '
         'txtLastName
         '
         Me.txtLastName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Last Name", True))
+        Me.txtLastName.Enabled = False
         Me.txtLastName.Location = New System.Drawing.Point(124, 236)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(100, 20)
         Me.txtLastName.TabIndex = 6
+        Me.txtLastName.TabStop = False
         '
         'txtSex
         '
         Me.txtSex.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Sex (M/F)", True))
+        Me.txtSex.Enabled = False
         Me.txtSex.Location = New System.Drawing.Point(124, 272)
         Me.txtSex.Name = "txtSex"
         Me.txtSex.Size = New System.Drawing.Size(100, 20)
         Me.txtSex.TabIndex = 8
+        Me.txtSex.TabStop = False
         '
         'txtAge
         '
         Me.txtAge.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Age", True))
+        Me.txtAge.Enabled = False
         Me.txtAge.Location = New System.Drawing.Point(124, 308)
         Me.txtAge.Name = "txtAge"
         Me.txtAge.Size = New System.Drawing.Size(100, 20)
         Me.txtAge.TabIndex = 10
+        Me.txtAge.TabStop = False
         '
         'txtHeight
         '
         Me.txtHeight.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Height (in)", True))
+        Me.txtHeight.Enabled = False
         Me.txtHeight.Location = New System.Drawing.Point(124, 344)
         Me.txtHeight.Name = "txtHeight"
         Me.txtHeight.Size = New System.Drawing.Size(100, 20)
         Me.txtHeight.TabIndex = 12
+        Me.txtHeight.TabStop = False
         '
         'txtWeight
         '
         Me.txtWeight.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Weight (lb)", True))
+        Me.txtWeight.Enabled = False
         Me.txtWeight.Location = New System.Drawing.Point(124, 380)
         Me.txtWeight.Name = "txtWeight"
         Me.txtWeight.Size = New System.Drawing.Size(100, 20)
         Me.txtWeight.TabIndex = 14
+        Me.txtWeight.TabStop = False
         '
         'txtGoalWeight
         '
         Me.txtGoalWeight.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Goal Weight", True))
+        Me.txtGoalWeight.Enabled = False
         Me.txtGoalWeight.Location = New System.Drawing.Point(124, 416)
         Me.txtGoalWeight.Name = "txtGoalWeight"
         Me.txtGoalWeight.Size = New System.Drawing.Size(100, 20)
         Me.txtGoalWeight.TabIndex = 16
+        Me.txtGoalWeight.TabStop = False
         '
         'datGoalDate
         '
         Me.datGoalDate.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.UserProfilesBindingSource, "Goal Date", True))
+        Me.datGoalDate.Enabled = False
         Me.datGoalDate.Location = New System.Drawing.Point(124, 452)
         Me.datGoalDate.Name = "datGoalDate"
         Me.datGoalDate.Size = New System.Drawing.Size(200, 20)
@@ -383,6 +401,7 @@ Partial Class NewProfiles
         'chkNoRestrictions
         '
         Me.chkNoRestrictions.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "No Restrictions", True))
+        Me.chkNoRestrictions.Enabled = False
         Me.chkNoRestrictions.Location = New System.Drawing.Point(363, 157)
         Me.chkNoRestrictions.Name = "chkNoRestrictions"
         Me.chkNoRestrictions.Size = New System.Drawing.Size(118, 24)
@@ -393,6 +412,7 @@ Partial Class NewProfiles
         'chkVegetarian
         '
         Me.chkVegetarian.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Vegetarian", True))
+        Me.chkVegetarian.Enabled = False
         Me.chkVegetarian.Location = New System.Drawing.Point(363, 183)
         Me.chkVegetarian.Name = "chkVegetarian"
         Me.chkVegetarian.Size = New System.Drawing.Size(104, 24)
@@ -403,6 +423,7 @@ Partial Class NewProfiles
         'chkVegan
         '
         Me.chkVegan.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Vegan", True))
+        Me.chkVegan.Enabled = False
         Me.chkVegan.Location = New System.Drawing.Point(363, 209)
         Me.chkVegan.Name = "chkVegan"
         Me.chkVegan.Size = New System.Drawing.Size(104, 24)
@@ -413,6 +434,7 @@ Partial Class NewProfiles
         'chkGlutenFree
         '
         Me.chkGlutenFree.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Gluten Free", True))
+        Me.chkGlutenFree.Enabled = False
         Me.chkGlutenFree.Location = New System.Drawing.Point(363, 235)
         Me.chkGlutenFree.Name = "chkGlutenFree"
         Me.chkGlutenFree.Size = New System.Drawing.Size(104, 24)
@@ -422,7 +444,9 @@ Partial Class NewProfiles
         '
         'txtBMI
         '
+        Me.txtBMI.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.txtBMI.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "BMI", True))
+        Me.txtBMI.Enabled = False
         Me.txtBMI.Location = New System.Drawing.Point(124, 488)
         Me.txtBMI.Name = "txtBMI"
         Me.txtBMI.ReadOnly = True
@@ -432,6 +456,7 @@ Partial Class NewProfiles
         'chkPeanut
         '
         Me.chkPeanut.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Peanut Allergy", True))
+        Me.chkPeanut.Enabled = False
         Me.chkPeanut.Location = New System.Drawing.Point(487, 157)
         Me.chkPeanut.Name = "chkPeanut"
         Me.chkPeanut.Size = New System.Drawing.Size(104, 24)
@@ -442,6 +467,7 @@ Partial Class NewProfiles
         'chkTreeNut
         '
         Me.chkTreeNut.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Tree Nut Allergy", True))
+        Me.chkTreeNut.Enabled = False
         Me.chkTreeNut.Location = New System.Drawing.Point(487, 183)
         Me.chkTreeNut.Name = "chkTreeNut"
         Me.chkTreeNut.Size = New System.Drawing.Size(104, 24)
@@ -452,6 +478,7 @@ Partial Class NewProfiles
         'chkSoy
         '
         Me.chkSoy.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Soy Allergy", True))
+        Me.chkSoy.Enabled = False
         Me.chkSoy.Location = New System.Drawing.Point(487, 209)
         Me.chkSoy.Name = "chkSoy"
         Me.chkSoy.Size = New System.Drawing.Size(104, 24)
@@ -462,6 +489,7 @@ Partial Class NewProfiles
         'chkEgg
         '
         Me.chkEgg.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Egg Allergy", True))
+        Me.chkEgg.Enabled = False
         Me.chkEgg.Location = New System.Drawing.Point(487, 235)
         Me.chkEgg.Name = "chkEgg"
         Me.chkEgg.Size = New System.Drawing.Size(104, 24)
@@ -472,6 +500,7 @@ Partial Class NewProfiles
         'chkFish
         '
         Me.chkFish.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Fish Allergy", True))
+        Me.chkFish.Enabled = False
         Me.chkFish.Location = New System.Drawing.Point(487, 261)
         Me.chkFish.Name = "chkFish"
         Me.chkFish.Size = New System.Drawing.Size(104, 24)
@@ -482,6 +511,7 @@ Partial Class NewProfiles
         'chkShellfish
         '
         Me.chkShellfish.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Shellfish Allergy", True))
+        Me.chkShellfish.Enabled = False
         Me.chkShellfish.Location = New System.Drawing.Point(487, 287)
         Me.chkShellfish.Name = "chkShellfish"
         Me.chkShellfish.Size = New System.Drawing.Size(104, 24)
@@ -492,6 +522,7 @@ Partial Class NewProfiles
         'chkLactose
         '
         Me.chkLactose.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Lactose Allergy", True))
+        Me.chkLactose.Enabled = False
         Me.chkLactose.Location = New System.Drawing.Point(487, 313)
         Me.chkLactose.Name = "chkLactose"
         Me.chkLactose.Size = New System.Drawing.Size(104, 24)
@@ -502,6 +533,7 @@ Partial Class NewProfiles
         'chkWheat
         '
         Me.chkWheat.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Wheat Allergy", True))
+        Me.chkWheat.Enabled = False
         Me.chkWheat.Location = New System.Drawing.Point(487, 339)
         Me.chkWheat.Name = "chkWheat"
         Me.chkWheat.Size = New System.Drawing.Size(104, 24)
@@ -511,6 +543,7 @@ Partial Class NewProfiles
         '
         'btnBMI
         '
+        Me.btnBMI.Enabled = False
         Me.btnBMI.Location = New System.Drawing.Point(230, 486)
         Me.btnBMI.Name = "btnBMI"
         Me.btnBMI.Size = New System.Drawing.Size(157, 23)
@@ -550,6 +583,7 @@ Partial Class NewProfiles
         '
         'btnNext
         '
+        Me.btnNext.Enabled = False
         Me.btnNext.Location = New System.Drawing.Point(479, 504)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(138, 45)
@@ -557,14 +591,33 @@ Partial Class NewProfiles
         Me.btnNext.Text = "Next"
         Me.btnNext.UseVisualStyleBackColor = True
         '
-        'lblWarning
+        'btnNewUser
         '
-        Me.lblWarning.AutoSize = True
-        Me.lblWarning.Location = New System.Drawing.Point(425, 486)
-        Me.lblWarning.Name = "lblWarning"
-        Me.lblWarning.Size = New System.Drawing.Size(204, 13)
-        Me.lblWarning.TabIndex = 50
-        Me.lblWarning.Text = "***Make sure you save before advancing."
+        Me.btnNewUser.Location = New System.Drawing.Point(285, 322)
+        Me.btnNewUser.Name = "btnNewUser"
+        Me.btnNewUser.Size = New System.Drawing.Size(130, 39)
+        Me.btnNewUser.TabIndex = 50
+        Me.btnNewUser.Text = "New User"
+        Me.btnNewUser.UseVisualStyleBackColor = True
+        '
+        'btnSave
+        '
+        Me.btnSave.Enabled = False
+        Me.btnSave.Location = New System.Drawing.Point(285, 371)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(130, 39)
+        Me.btnSave.TabIndex = 51
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'btnReturningUser
+        '
+        Me.btnReturningUser.Location = New System.Drawing.Point(285, 272)
+        Me.btnReturningUser.Name = "btnReturningUser"
+        Me.btnReturningUser.Size = New System.Drawing.Size(130, 39)
+        Me.btnReturningUser.TabIndex = 52
+        Me.btnReturningUser.Text = "Returning User"
+        Me.btnReturningUser.UseVisualStyleBackColor = True
         '
         'NewProfiles
         '
@@ -572,7 +625,9 @@ Partial Class NewProfiles
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(629, 561)
-        Me.Controls.Add(Me.lblWarning)
+        Me.Controls.Add(Me.btnReturningUser)
+        Me.Controls.Add(Me.btnSave)
+        Me.Controls.Add(Me.btnNewUser)
         Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.lblRestrictions)
@@ -668,7 +723,6 @@ Partial Class NewProfiles
     Friend WithEvents lblRestrictions As Label
     Friend WithEvents lblWelcome As Label
     Friend WithEvents btnNext As Button
-    Friend WithEvents lblWarning As Label
     Friend WithEvents lblID As Label
     Friend WithEvents lblFirstName As Label
     Friend WithEvents lblLastName As Label
@@ -679,4 +733,7 @@ Partial Class NewProfiles
     Friend WithEvents lblGoalWeight As Label
     Friend WithEvents lblGoalDate As Label
     Friend WithEvents lblBMI As Label
+    Friend WithEvents btnNewUser As Button
+    Friend WithEvents btnSave As Button
+    Friend WithEvents btnReturningUser As Button
 End Class

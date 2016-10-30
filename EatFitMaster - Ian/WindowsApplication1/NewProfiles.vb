@@ -17,12 +17,16 @@
     End Sub
 
     Private Sub btnBMI_Click(sender As Object, e As EventArgs) Handles btnBMI.Click
-        txtBMI.Text = ""
+
         Try
+            txtBMI.Text = ""
             basic_weight = txtWeight.Text
             basic_height = txtHeight.Text
             basic_BMI = ((basic_weight / (basic_height * basic_height)) * 703)
             txtBMI.Text = basic_BMI
+            lblBMI.ForeColor = Color.Black
+            lblHeight.ForeColor = Color.Black
+            lblWeight.ForeColor = Color.Black
         Catch BMIerror As Exception
             MsgBox("Invalid Height or Weight")
         End Try
@@ -38,7 +42,17 @@
         checkgoalweight()
         checkgoaldate()
         checkBMI()
-        checkerrors()
+        If basic_errorflag = True Then
+            checkerrors()
+        Else
+            UserProfilesBindingSource.EndEdit()
+            UserProfilesTableAdapter.Update(EatFitDatabaseDataSet.UserProfiles)
+            MessageBox.Show("Data Submitted!", "Successful Save")
+            frmWelcome.Show()
+            Me.Close()
+        End If
+
+
     End Sub
     Private Sub checkfirstname()
         'check/store Name
@@ -102,6 +116,7 @@
             basic_errorflag = True
         End If
     End Sub
+
     Private Sub checkweight()
         'check/store Weight
         If IsNumeric(txtWeight.Text) Then
@@ -113,6 +128,27 @@
             basic_errorflag = True
         End If
     End Sub
+
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        'attempts to save information so user doesn't forget to
+        Try
+            UserProfilesBindingSource.EndEdit()
+            UserProfilesTableAdapter.Update(EatFitDatabaseDataSet.UserProfiles)
+        Catch ex As Exception
+            MessageBox.Show("Error Saving", "Error")
+        End Try
+    End Sub
+
+    Private Sub btnNewUser_Click(sender As Object, e As EventArgs) Handles btnNewUser.Click
+        UserProfilesBindingSource.AddNew() 'adds new user to prevent user mistake of not creating new entry
+        enableobjects() 'unlocks form to enter information
+    End Sub
+
+    Private Sub btnReturningUser_Click(sender As Object, e As EventArgs) Handles btnReturningUser.Click
+        'unlocks form to allow user to find profile
+        enableobjects()
+    End Sub
+
     Private Sub checkBMI()
         'check/calculate BMI
         If IsNumeric(txtBMI.Text) Then
@@ -156,5 +192,31 @@
             frmWelcome.Show()
             Me.Close()
         End If
+    End Sub
+    Private Sub enableobjects()
+        txtAge.Enabled = True
+        txtBMI.Enabled = True
+        txtFirstName.Enabled = True
+        txtGoalWeight.Enabled = True
+        txtHeight.Enabled = True
+        txtLastName.Enabled = True
+        txtSex.Enabled = True
+        txtWeight.Enabled = True
+        btnBMI.Enabled = True
+        btnSave.Enabled = True
+        btnNext.Enabled = True
+        chkEgg.Enabled = True
+        chkFish.Enabled = True
+        chkGlutenFree.Enabled = True
+        chkLactose.Enabled = True
+        chkNoRestrictions.Enabled = True
+        chkPeanut.Enabled = True
+        chkShellfish.Enabled = True
+        chkSoy.Enabled = True
+        chkTreeNut.Enabled = True
+        chkVegan.Enabled = True
+        chkVegetarian.Enabled = True
+        chkWheat.Enabled = True
+        datGoalDate.Enabled = True
     End Sub
 End Class
