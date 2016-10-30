@@ -22,4 +22,9 @@
         My.Forms.frmSnack.Text = Now.ToString
         My.Forms.frmSnack.Show()
     End Sub
+
+    Private Sub btnPrevious_Click(sender As Object, e As EventArgs) Handles btnPrevious.Click
+        NewProfiles.Show()
+        Me.Close()
+    End Sub
 End Class

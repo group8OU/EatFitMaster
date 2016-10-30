@@ -81,6 +81,7 @@ Partial Class NewProfiles
         Me.btnNewUser = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnReturningUser = New System.Windows.Forms.Button()
+        Me.btnTempNav = New System.Windows.Forms.Button()
         CType(Me.EatFitDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserProfilesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserProfilesBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -620,12 +621,22 @@ Partial Class NewProfiles
         Me.btnReturningUser.Text = "Returning User"
         Me.btnReturningUser.UseVisualStyleBackColor = True
         '
+        'btnTempNav
+        '
+        Me.btnTempNav.Location = New System.Drawing.Point(12, 526)
+        Me.btnTempNav.Name = "btnTempNav"
+        Me.btnTempNav.Size = New System.Drawing.Size(167, 23)
+        Me.btnTempNav.TabIndex = 53
+        Me.btnTempNav.Text = "temporary dev navigation ->"
+        Me.btnTempNav.UseVisualStyleBackColor = True
+        '
         'NewProfiles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(629, 561)
+        Me.Controls.Add(Me.btnTempNav)
         Me.Controls.Add(Me.btnReturningUser)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnNewUser)
@@ -737,4 +748,5 @@ Partial Class NewProfiles
     Friend WithEvents btnNewUser As Button
     Friend WithEvents btnDelete As Button
     Friend WithEvents btnReturningUser As Button
+    Friend WithEvents btnTempNav As Button
 End Class

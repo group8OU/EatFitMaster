@@ -31,6 +31,7 @@ Partial Class frmWelcome
         Me.btnHeavy = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblWorkout = New System.Windows.Forms.Label()
+        Me.btnPrevious = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnBreakfast
@@ -121,6 +122,15 @@ Partial Class frmWelcome
         Me.lblWorkout.TabIndex = 7
         Me.lblWorkout.Text = "Select a Workout Type"
         '
+        'btnPrevious
+        '
+        Me.btnPrevious.Location = New System.Drawing.Point(138, 208)
+        Me.btnPrevious.Name = "btnPrevious"
+        Me.btnPrevious.Size = New System.Drawing.Size(75, 23)
+        Me.btnPrevious.TabIndex = 8
+        Me.btnPrevious.Text = "<- Previous"
+        Me.btnPrevious.UseVisualStyleBackColor = True
+        '
         'frmWelcome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -128,6 +138,7 @@ Partial Class frmWelcome
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(484, 243)
+        Me.Controls.Add(Me.btnPrevious)
         Me.Controls.Add(Me.lblWorkout)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnHeavy)
@@ -151,4 +162,5 @@ Partial Class frmWelcome
     Friend WithEvents btnHeavy As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents lblWorkout As Label
+    Friend WithEvents btnPrevious As Button
 End Class

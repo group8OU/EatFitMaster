@@ -148,6 +148,11 @@
 
     End Sub
 
+    Private Sub btnTempNav_Click(sender As Object, e As EventArgs) Handles btnTempNav.Click
+        frmWelcome.Show()
+        Me.Close()
+    End Sub
+
     Private Sub checkBMI()
         'check/calculate BMI
         If IsNumeric(txtBMI.Text) Then
