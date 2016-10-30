@@ -79,7 +79,7 @@ Partial Class NewProfiles
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.btnNext = New System.Windows.Forms.Button()
         Me.btnNewUser = New System.Windows.Forms.Button()
-        Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnReturningUser = New System.Windows.Forms.Button()
         CType(Me.EatFitDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserProfilesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -203,6 +203,7 @@ Partial Class NewProfiles
         Me.UserProfilesBindingNavigator.BindingSource = Me.UserProfilesBindingSource
         Me.UserProfilesBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.UserProfilesBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.UserProfilesBindingNavigator.Enabled = False
         Me.UserProfilesBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.UserProfilesBindingNavigatorSaveItem})
         Me.UserProfilesBindingNavigator.Location = New System.Drawing.Point(0, 0)
         Me.UserProfilesBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
@@ -600,15 +601,15 @@ Partial Class NewProfiles
         Me.btnNewUser.Text = "New User"
         Me.btnNewUser.UseVisualStyleBackColor = True
         '
-        'btnSave
+        'btnDelete
         '
-        Me.btnSave.Enabled = False
-        Me.btnSave.Location = New System.Drawing.Point(285, 371)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(130, 39)
-        Me.btnSave.TabIndex = 51
-        Me.btnSave.Text = "Save"
-        Me.btnSave.UseVisualStyleBackColor = True
+        Me.btnDelete.Enabled = False
+        Me.btnDelete.Location = New System.Drawing.Point(285, 371)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(130, 39)
+        Me.btnDelete.TabIndex = 51
+        Me.btnDelete.Text = "Delete Profile"
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
         'btnReturningUser
         '
@@ -626,7 +627,7 @@ Partial Class NewProfiles
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(629, 561)
         Me.Controls.Add(Me.btnReturningUser)
-        Me.Controls.Add(Me.btnSave)
+        Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnNewUser)
         Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.lblWelcome)
@@ -734,6 +735,6 @@ Partial Class NewProfiles
     Friend WithEvents lblGoalDate As Label
     Friend WithEvents lblBMI As Label
     Friend WithEvents btnNewUser As Button
-    Friend WithEvents btnSave As Button
+    Friend WithEvents btnDelete As Button
     Friend WithEvents btnReturningUser As Button
 End Class

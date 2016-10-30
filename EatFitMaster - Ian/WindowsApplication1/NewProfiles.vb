@@ -129,16 +129,6 @@
         End If
     End Sub
 
-    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        'attempts to save information so user doesn't forget to
-        Try
-            UserProfilesBindingSource.EndEdit()
-            UserProfilesTableAdapter.Update(EatFitDatabaseDataSet.UserProfiles)
-        Catch ex As Exception
-            MessageBox.Show("Error Saving", "Error")
-        End Try
-    End Sub
-
     Private Sub btnNewUser_Click(sender As Object, e As EventArgs) Handles btnNewUser.Click
         UserProfilesBindingSource.AddNew() 'adds new user to prevent user mistake of not creating new entry
         enableobjects() 'unlocks form to enter information
@@ -147,6 +137,15 @@
     Private Sub btnReturningUser_Click(sender As Object, e As EventArgs) Handles btnReturningUser.Click
         'unlocks form to allow user to find profile
         enableobjects()
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        Try
+            UserProfilesBindingSource.RemoveCurrent()
+        Catch ex As Exception
+            MessageBox.Show("No More Profiles to Delete", "Deletion Error")
+        End Try
+
     End Sub
 
     Private Sub checkBMI()
@@ -203,7 +202,7 @@
         txtSex.Enabled = True
         txtWeight.Enabled = True
         btnBMI.Enabled = True
-        btnSave.Enabled = True
+        btnDelete.Enabled = True
         btnNext.Enabled = True
         chkEgg.Enabled = True
         chkFish.Enabled = True
@@ -218,5 +217,6 @@
         chkVegetarian.Enabled = True
         chkWheat.Enabled = True
         datGoalDate.Enabled = True
+        UserProfilesBindingNavigator.Enabled = True
     End Sub
 End Class
