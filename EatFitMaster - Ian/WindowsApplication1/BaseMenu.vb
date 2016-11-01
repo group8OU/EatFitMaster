@@ -32,4 +32,9 @@
         My.Forms.frmLight.Text = Now.ToString
         My.Forms.frmLight.Show()
     End Sub
+
+    Private Sub btnHeavy_Click(sender As Object, e As EventArgs) Handles btnHeavy.Click
+        My.Forms.frmHeavy.Text = Now.ToString
+        My.Forms.frmHeavy.Show()
+    End Sub
 End Class
