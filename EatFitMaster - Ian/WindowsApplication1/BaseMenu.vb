@@ -27,4 +27,9 @@
         NewProfiles.Show()
         Me.Close()
     End Sub
+
+    Private Sub btnLight_Click(sender As Object, e As EventArgs) Handles btnLight.Click
+        My.Forms.frmLight.Text = Now.ToString
+        My.Forms.frmLight.Show()
+    End Sub
 End Class

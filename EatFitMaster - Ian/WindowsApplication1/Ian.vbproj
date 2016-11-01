@@ -109,6 +109,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EatFitDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Light.Designer.vb">
+      <DependentUpon>Light.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Light.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Breakfast.resx">
       <DependentUpon>Breakfast.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Light.resx">
+      <DependentUpon>Light.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>

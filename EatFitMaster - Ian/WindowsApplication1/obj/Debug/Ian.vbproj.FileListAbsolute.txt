@@ -80,3 +80,7 @@ C:\Users\Peter\Desktop\Homework\cit280_github\EatFitMaster\EatFitMaster\EatFitMa
 C:\Users\Peter\Desktop\Homework\cit280_github\EatFitMaster\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
 C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\bin\Debug\EatFitDatabase.accdb
 C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.NewProfiles.resources
+C:\Users\Ian\Source\Repos\EatFitMaster8\EatFitMaster - Ian\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\Ian\Source\Repos\EatFitMaster8\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\Ian\Source\Repos\EatFitMaster8\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\Ian\Source\Repos\EatFitMaster8\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
