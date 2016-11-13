@@ -1,8 +1,4 @@
 ﻿Public Class frmWelcome
-    Private Sub Label2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub btnLunch_Click(sender As Object, e As EventArgs) Handles btnLunch.Click
         My.Forms.frmLunch.Text = Now.ToString
         My.Forms.frmLunch.Show()
@@ -31,10 +27,20 @@
     Private Sub btnLight_Click(sender As Object, e As EventArgs) Handles btnLight.Click
         My.Forms.frmLight.Text = Now.ToString
         My.Forms.frmLight.Show()
+        Label2.Text = NewProfiles.basic_firstname
+
     End Sub
 
     Private Sub btnHeavy_Click(sender As Object, e As EventArgs) Handles btnHeavy.Click
         My.Forms.frmHeavy.Text = Now.ToString
         My.Forms.frmHeavy.Show()
+    End Sub
+
+    Private Sub Label2_Click_1(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub frmWelcome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

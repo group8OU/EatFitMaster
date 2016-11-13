@@ -1,8 +1,10 @@
 ﻿Public Class NewProfiles
     Dim basic_errorflag As Boolean = False
-    Dim basic_name, basic_sex As String
-    Dim basic_age, basic_height, basic_weight, basic_BMI, basic_Gweight As Integer
-    Dim basic_Gdate As Date
+    Public Shared basic_firstname, basic_lastname, basic_sex As String
+    Public Shared basic_age, basic_height, basic_weight, basic_BMI, basic_Gweight As Integer
+    Public Shared basic_Gdate As Date
+
+
     Private Sub UserProfilesBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles UserProfilesBindingNavigatorSaveItem.Click
         Me.Validate()
         Me.UserProfilesBindingSource.EndEdit()
@@ -57,7 +59,7 @@
     Private Sub checkfirstname()
         'check/store Name
         If txtFirstName.Text.Length > 0 Then
-            basic_name = txtFirstName.Text
+            basic_firstname = txtFirstName.Text
             basic_errorflag = False
             lblFirstName.ForeColor = Color.Black
         Else
@@ -68,7 +70,7 @@
     Private Sub checklastname()
         'check/store Name
         If txtLastName.Text.Length > 0 Then
-            basic_name = txtLastName.Text
+            basic_lastname = txtLastName.Text
             basic_errorflag = False
             lblLastName.ForeColor = Color.Black
         Else

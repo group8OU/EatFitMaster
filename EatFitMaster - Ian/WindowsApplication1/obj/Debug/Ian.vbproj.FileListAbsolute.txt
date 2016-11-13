@@ -84,3 +84,5 @@ C:\Users\Ian\Source\Repos\EatFitMaster8\EatFitMaster - Ian\WindowsApplication1\b
 C:\Users\Ian\Source\Repos\EatFitMaster8\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.exe
 C:\Users\Ian\Source\Repos\EatFitMaster8\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.xml
 C:\Users\Ian\Source\Repos\EatFitMaster8\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.frmHeavy.resources
+C:\Users\chadm\Source\Repos\EatFitMaster\EatFitMaster - Ian\WindowsApplication1\obj\Debug\WindowsApplication1.frmLight.resources
