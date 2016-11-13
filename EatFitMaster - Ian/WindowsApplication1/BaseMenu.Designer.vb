@@ -32,6 +32,7 @@ Partial Class frmWelcome
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblWorkout = New System.Windows.Forms.Label()
         Me.btnPrevious = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnBreakfast
@@ -131,6 +132,15 @@ Partial Class frmWelcome
         Me.btnPrevious.Text = "<- Previous"
         Me.btnPrevious.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(284, 155)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Label2"
+        '
         'frmWelcome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -138,6 +148,7 @@ Partial Class frmWelcome
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(484, 243)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnPrevious)
         Me.Controls.Add(Me.lblWorkout)
         Me.Controls.Add(Me.Label1)
@@ -163,4 +174,5 @@ Partial Class frmWelcome
     Friend WithEvents Label1 As Label
     Friend WithEvents lblWorkout As Label
     Friend WithEvents btnPrevious As Button
+    Friend WithEvents Label2 As Label
 End Class
