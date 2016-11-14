@@ -44,22 +44,14 @@
         checkgoalweight()
         checkgoaldate()
         checkBMI()
-        If basic_errorflag = True Then
-            checkerrors()
-        Else
-            UserProfilesBindingSource.EndEdit()
-            UserProfilesTableAdapter.Update(EatFitDatabaseDataSet.UserProfiles)
-            MessageBox.Show("Data Submitted!", "Successful Save")
-            frmWelcome.Show()
-            Me.Close()
-        End If
+        checkerrors()
 
 
     End Sub
     Private Sub checkfirstname()
         'check/store Name
         If txtFirstName.Text.Length > 0 Then
-            basic_firstname = txtFirstName.Text
+            basic_firstname = txtFirstName.Text.Trim
             basic_errorflag = False
             lblFirstName.ForeColor = Color.Black
         Else
@@ -70,7 +62,7 @@
     Private Sub checklastname()
         'check/store Name
         If txtLastName.Text.Length > 0 Then
-            basic_lastname = txtLastName.Text
+            basic_lastname = txtLastName.Text.Trim
             basic_errorflag = False
             lblLastName.ForeColor = Color.Black
         Else
