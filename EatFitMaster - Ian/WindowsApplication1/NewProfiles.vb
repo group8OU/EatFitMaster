@@ -20,7 +20,6 @@
     End Sub
 
     Private Sub btnBMI_Click(sender As Object, e As EventArgs) Handles btnBMI.Click
-
         Try
             txtBMI.Text = ""
             basic_weight = txtWeight.Text
@@ -150,9 +149,17 @@
 
     End Sub
 
+    Private Sub txtLastName_TextChanged(sender As Object, e As EventArgs) Handles txtLastName.TextChanged
+
+    End Sub
+
     Private Sub btnTempNav_Click(sender As Object, e As EventArgs) Handles btnTempNav.Click
         frmWelcome.Show()
         Me.Close()
+    End Sub
+
+    Private Sub txtSex_TextChanged(sender As Object, e As EventArgs) Handles txtSex.TextChanged
+
     End Sub
 
     Private Sub checkBMI()
@@ -229,5 +236,33 @@
         chkWheat.Enabled = True
         datGoalDate.Enabled = True
         UserProfilesBindingNavigator.Enabled = True
+    End Sub
+
+    Private Sub txtLastName_GotFocus(sender As Object, e As EventArgs) Handles txtLastName.GotFocus
+        checkfirstname()
+    End Sub
+
+    Private Sub txtSex_GotFocus(sender As Object, e As EventArgs) Handles txtSex.GotFocus
+        checklastname()
+    End Sub
+
+    Private Sub txtAge_GotFocus(sender As Object, e As EventArgs) Handles txtAge.GotFocus
+        checksex()
+    End Sub
+
+    Private Sub txtHeight_GotFocus(sender As Object, e As EventArgs) Handles txtHeight.GotFocus
+        checkage()
+    End Sub
+
+    Private Sub txtWeight_GotFocus(sender As Object, e As EventArgs) Handles txtWeight.GotFocus
+        checkheight()
+    End Sub
+
+    Private Sub txtGoalWeight_GotFocus(sender As Object, e As EventArgs) Handles txtGoalWeight.GotFocus
+        checkweight()
+    End Sub
+
+    Private Sub datGoalDate_GotFocus(sender As Object, e As EventArgs) Handles datGoalDate.GotFocus
+        checkgoalweight()
     End Sub
 End Class
