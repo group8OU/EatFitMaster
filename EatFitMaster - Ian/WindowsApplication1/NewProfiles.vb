@@ -80,12 +80,12 @@
     End Sub
     Private Sub checksex()
         'check/store Sex
-        If txtSex.Text.ToUpper = "F" Then
+        If txtSex.Text.Trim.ToUpper = "F" Then
             basic_sex = "F"
             txtSex.Text = "F"
             basic_errorflag = False
             lblSex.ForeColor = Color.Black
-        ElseIf txtSex.Text.ToUpper = "M" Then
+        ElseIf txtSex.Text.Trim.ToUpper = "M" Then
             basic_sex = "M"
             txtSex.Text = "M"
             basic_errorflag = False
