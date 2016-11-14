@@ -186,7 +186,6 @@
         If basic_errorflag = True Then
             MsgBox("Some fields are missing or incorrect. Please correct those highlighted in red.", , "Error")
         Else
-            MsgBox("Successfully submitted!",, "Accepted.")
             lblFirstName.ForeColor = Color.Black
             lblSex.ForeColor = Color.Black
             lblAge.ForeColor = Color.Black
@@ -195,6 +194,9 @@
             lblBMI.ForeColor = Color.Black
             lblGoalWeight.ForeColor = Color.Black
             lblLastName.ForeColor = Color.Black
+            UserProfilesBindingSource.EndEdit()
+            UserProfilesTableAdapter.Update(EatFitDatabaseDataSet.UserProfiles)
+            MessageBox.Show("Data Submitted!", "Successful Save")
             frmWelcome.Show()
             Me.Close()
         End If

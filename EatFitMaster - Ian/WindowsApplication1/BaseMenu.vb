@@ -27,7 +27,6 @@
     Private Sub btnLight_Click(sender As Object, e As EventArgs) Handles btnLight.Click
         My.Forms.frmLight.Text = Now.ToString
         My.Forms.frmLight.Show()
-        Label2.Text = NewProfiles.basic_firstname
 
     End Sub
 
@@ -41,6 +40,21 @@
     End Sub
 
     Private Sub frmWelcome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblName.Text = NewProfiles.basic_firstname & " " & NewProfiles.basic_lastname
+        lblSex.Text = NewProfiles.basic_sex
+        lblAge.Text = NewProfiles.basic_age
+        lblWeight.Text = NewProfiles.basic_weight
+        lblHeight.Text = NewProfiles.basic_height
+        lblBMI.Text = NewProfiles.basic_BMI
+        lblGW.Text = NewProfiles.basic_Gweight
+        lblGD.Text = NewProfiles.basic_Gdate
+    End Sub
+
+    Private Sub lblFullName_Click(sender As Object, e As EventArgs) Handles lblFullName.Click
+
+    End Sub
+
+    Private Sub lblAgeTitle_Click(sender As Object, e As EventArgs) Handles lblAgeTitle.Click
 
     End Sub
 End Class
