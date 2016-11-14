@@ -205,7 +205,6 @@
             lblLastName.ForeColor = Color.Black
             UserProfilesBindingSource.EndEdit()
             UserProfilesTableAdapter.Update(EatFitDatabaseDataSet.UserProfiles)
-            MessageBox.Show("Data Submitted!", "Successful Save")
             frmWelcome.Show()
             Me.Close()
         End If
