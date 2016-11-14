@@ -265,4 +265,8 @@
     Private Sub datGoalDate_GotFocus(sender As Object, e As EventArgs) Handles datGoalDate.GotFocus
         checkgoalweight()
     End Sub
+
+    Private Sub chkNoRestrictions_GotFocus(sender As Object, e As EventArgs) Handles chkNoRestrictions.GotFocus
+        checkBMI()
+    End Sub
 End Class
