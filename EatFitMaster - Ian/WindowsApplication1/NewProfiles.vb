@@ -3,6 +3,7 @@
     Public Shared basic_firstname, basic_lastname, basic_sex As String
     Public Shared basic_age, basic_height, basic_weight, basic_BMI, basic_Gweight As Integer
     Public Shared basic_Gdate As Date
+    Public Shared errorcount As Integer
 
 
     Private Sub UserProfilesBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles UserProfilesBindingNavigatorSaveItem.Click
@@ -35,6 +36,7 @@
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        errorcount = 0
         checkfirstname()
         checklastname()
         checksex()
@@ -57,6 +59,7 @@
         Else
             lblFirstName.ForeColor = Color.Red
             basic_errorflag = True
+            errorcount += 1
         End If
     End Sub
     Private Sub checklastname()
@@ -68,6 +71,7 @@
         Else
             lblLastName.ForeColor = Color.Red
             basic_errorflag = True
+            errorcount += 1
         End If
     End Sub
     Private Sub checksex()
@@ -85,6 +89,7 @@
         Else
             lblSex.ForeColor = Color.Red
             basic_errorflag = True
+            errorcount += 1
         End If
 
     End Sub
@@ -97,6 +102,7 @@
         Else
             lblAge.ForeColor = Color.Red
             basic_errorflag = True
+            errorcount += 1
         End If
     End Sub
     Private Sub checkheight()
@@ -108,6 +114,7 @@
         Else
             lblHeight.ForeColor = Color.Red
             basic_errorflag = True
+            errorcount += 1
         End If
     End Sub
 
@@ -120,6 +127,7 @@
         Else
             lblWeight.ForeColor = Color.Red
             basic_errorflag = True
+            errorcount += 1
         End If
     End Sub
 
@@ -156,6 +164,7 @@
         Else
             lblBMI.ForeColor = Color.Red
             basic_errorflag = True
+            errorcount += 1
         End If
     End Sub
     Private Sub checkgoalweight()
@@ -167,6 +176,7 @@
         Else
             lblGoalWeight.ForeColor = Color.Red
             basic_errorflag = True
+            errorcount += 1
         End If
     End Sub
     Private Sub checkgoaldate()
@@ -175,7 +185,7 @@
     End Sub
     Private Sub checkerrors()
         'check errors/finalize
-        If basic_errorflag = True Then
+        If errorcount > 0 Then
             MsgBox("Some fields are missing or incorrect. Please correct those highlighted in red.", , "Error")
         Else
             lblFirstName.ForeColor = Color.Black
