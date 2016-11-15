@@ -22,6 +22,7 @@ Partial Class frmLight
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLight))
         Me.txtL6 = New System.Windows.Forms.TextBox()
         Me.txtL5 = New System.Windows.Forms.TextBox()
         Me.txtL3 = New System.Windows.Forms.TextBox()
@@ -42,89 +43,109 @@ Partial Class frmLight
         'txtL6
         '
         Me.txtL6.BackColor = System.Drawing.Color.NavajoWhite
-        Me.txtL6.Location = New System.Drawing.Point(454, 115)
+        Me.txtL6.Location = New System.Drawing.Point(681, 177)
+        Me.txtL6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtL6.Name = "txtL6"
-        Me.txtL6.Size = New System.Drawing.Size(100, 20)
+        Me.txtL6.Size = New System.Drawing.Size(148, 26)
         Me.txtL6.TabIndex = 39
+        Me.txtL6.Text = "Upper Back"
         '
         'txtL5
         '
         Me.txtL5.BackColor = System.Drawing.Color.NavajoWhite
-        Me.txtL5.Location = New System.Drawing.Point(348, 115)
+        Me.txtL5.Location = New System.Drawing.Point(522, 177)
+        Me.txtL5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtL5.Name = "txtL5"
-        Me.txtL5.Size = New System.Drawing.Size(100, 20)
+        Me.txtL5.Size = New System.Drawing.Size(148, 26)
         Me.txtL5.TabIndex = 38
+        Me.txtL5.Text = "Sides"
         '
         'txtL3
         '
         Me.txtL3.BackColor = System.Drawing.Color.NavajoWhite
-        Me.txtL3.Location = New System.Drawing.Point(242, 115)
+        Me.txtL3.Location = New System.Drawing.Point(363, 177)
+        Me.txtL3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtL3.Name = "txtL3"
-        Me.txtL3.Size = New System.Drawing.Size(100, 20)
+        Me.txtL3.Size = New System.Drawing.Size(148, 26)
         Me.txtL3.TabIndex = 37
+        Me.txtL3.Text = "Upper Back"
         '
         'txtL2
         '
         Me.txtL2.BackColor = System.Drawing.Color.NavajoWhite
-        Me.txtL2.Location = New System.Drawing.Point(136, 115)
+        Me.txtL2.Location = New System.Drawing.Point(204, 177)
+        Me.txtL2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtL2.Name = "txtL2"
-        Me.txtL2.Size = New System.Drawing.Size(100, 20)
+        Me.txtL2.Size = New System.Drawing.Size(148, 26)
         Me.txtL2.TabIndex = 36
+        Me.txtL2.Text = "Abd Workout"
         '
         'txtL1
         '
         Me.txtL1.BackColor = System.Drawing.Color.NavajoWhite
-        Me.txtL1.Location = New System.Drawing.Point(30, 115)
+        Me.txtL1.Location = New System.Drawing.Point(45, 177)
+        Me.txtL1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtL1.Name = "txtL1"
-        Me.txtL1.Size = New System.Drawing.Size(100, 20)
+        Me.txtL1.Size = New System.Drawing.Size(148, 26)
         Me.txtL1.TabIndex = 35
+        Me.txtL1.Text = "Flexing"
         '
         'pbL7
         '
-        Me.pbL7.Location = New System.Drawing.Point(454, 31)
+        Me.pbL7.Image = CType(resources.GetObject("pbL7.Image"), System.Drawing.Image)
+        Me.pbL7.Location = New System.Drawing.Point(681, 93)
+        Me.pbL7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pbL7.Name = "pbL7"
-        Me.pbL7.Size = New System.Drawing.Size(100, 78)
+        Me.pbL7.Size = New System.Drawing.Size(150, 75)
         Me.pbL7.TabIndex = 34
         Me.pbL7.TabStop = False
         '
         'pbL5
         '
-        Me.pbL5.Location = New System.Drawing.Point(348, 31)
+        Me.pbL5.Image = CType(resources.GetObject("pbL5.Image"), System.Drawing.Image)
+        Me.pbL5.Location = New System.Drawing.Point(522, 93)
+        Me.pbL5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pbL5.Name = "pbL5"
-        Me.pbL5.Size = New System.Drawing.Size(100, 78)
+        Me.pbL5.Size = New System.Drawing.Size(150, 75)
         Me.pbL5.TabIndex = 33
         Me.pbL5.TabStop = False
         '
         'pbL4
         '
-        Me.pbL4.Location = New System.Drawing.Point(242, 31)
+        Me.pbL4.Image = CType(resources.GetObject("pbL4.Image"), System.Drawing.Image)
+        Me.pbL4.Location = New System.Drawing.Point(363, 93)
+        Me.pbL4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pbL4.Name = "pbL4"
-        Me.pbL4.Size = New System.Drawing.Size(100, 78)
+        Me.pbL4.Size = New System.Drawing.Size(150, 75)
         Me.pbL4.TabIndex = 32
         Me.pbL4.TabStop = False
         '
         'pbL2
         '
-        Me.pbL2.Location = New System.Drawing.Point(136, 31)
+        Me.pbL2.Image = CType(resources.GetObject("pbL2.Image"), System.Drawing.Image)
+        Me.pbL2.Location = New System.Drawing.Point(204, 93)
+        Me.pbL2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pbL2.Name = "pbL2"
-        Me.pbL2.Size = New System.Drawing.Size(100, 78)
+        Me.pbL2.Size = New System.Drawing.Size(150, 75)
         Me.pbL2.TabIndex = 31
         Me.pbL2.TabStop = False
         '
         'pbL1
         '
-        Me.pbL1.Location = New System.Drawing.Point(30, 31)
+        Me.pbL1.Image = CType(resources.GetObject("pbL1.Image"), System.Drawing.Image)
+        Me.pbL1.Location = New System.Drawing.Point(45, 93)
+        Me.pbL1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pbL1.Name = "pbL1"
-        Me.pbL1.Size = New System.Drawing.Size(100, 78)
+        Me.pbL1.Size = New System.Drawing.Size(150, 75)
         Me.pbL1.TabIndex = 30
         Me.pbL1.TabStop = False
         '
         'frmLight
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkOrange
-        Me.ClientSize = New System.Drawing.Size(584, 166)
+        Me.ClientSize = New System.Drawing.Size(876, 255)
         Me.Controls.Add(Me.txtL6)
         Me.Controls.Add(Me.txtL5)
         Me.Controls.Add(Me.txtL3)
@@ -135,6 +156,7 @@ Partial Class frmLight
         Me.Controls.Add(Me.pbL4)
         Me.Controls.Add(Me.pbL2)
         Me.Controls.Add(Me.pbL1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmLight"
         Me.Text = "Light Workout"
         CType(Me.pbL7, System.ComponentModel.ISupportInitialize).EndInit()
