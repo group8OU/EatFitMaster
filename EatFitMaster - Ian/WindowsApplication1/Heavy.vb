@@ -7,6 +7,6 @@
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        PictureBox1.Image = ImageList1.ImageCollection(0)
+
     End Sub
 End Class

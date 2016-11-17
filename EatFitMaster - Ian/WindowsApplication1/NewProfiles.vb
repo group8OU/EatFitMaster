@@ -133,11 +133,15 @@
     Private Sub btnNewUser_Click(sender As Object, e As EventArgs) Handles btnNewUser.Click
         UserProfilesBindingSource.AddNew() 'adds new user to prevent user mistake of not creating new entry
         enableobjects() 'unlocks form to enter information
+        btnNewUser.Enabled = False
+        btnReturningUser.Enabled = False
     End Sub
 
     Private Sub btnReturningUser_Click(sender As Object, e As EventArgs) Handles btnReturningUser.Click
         'unlocks form to allow user to find profile
         enableobjects()
+        btnNewUser.Enabled = False
+        btnReturningUser.Enabled = False
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
@@ -146,6 +150,8 @@
         Catch ex As Exception
             MessageBox.Show("No More Profiles to Delete", "Deletion Error")
         End Try
+        btnNewUser.Enabled = True
+        btnReturningUser.Enabled = True
 
     End Sub
 

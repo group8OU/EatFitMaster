@@ -91,6 +91,7 @@ Partial Class NewProfiles
         'lblID
         '
         Me.lblID.AutoSize = True
+        Me.lblID.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblID.Location = New System.Drawing.Point(84, 168)
         Me.lblID.Name = "lblID"
         Me.lblID.Size = New System.Drawing.Size(21, 13)
@@ -100,81 +101,90 @@ Partial Class NewProfiles
         'lblFirstName
         '
         Me.lblFirstName.AutoSize = True
+        Me.lblFirstName.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFirstName.Location = New System.Drawing.Point(45, 204)
         Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(60, 13)
+        Me.lblFirstName.Size = New System.Drawing.Size(65, 13)
         Me.lblFirstName.TabIndex = 3
         Me.lblFirstName.Text = "First Name:"
         '
         'lblLastName
         '
         Me.lblLastName.AutoSize = True
+        Me.lblLastName.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLastName.Location = New System.Drawing.Point(44, 240)
         Me.lblLastName.Name = "lblLastName"
-        Me.lblLastName.Size = New System.Drawing.Size(61, 13)
+        Me.lblLastName.Size = New System.Drawing.Size(63, 13)
         Me.lblLastName.TabIndex = 5
         Me.lblLastName.Text = "Last Name:"
         '
         'lblSex
         '
         Me.lblSex.AutoSize = True
+        Me.lblSex.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSex.Location = New System.Drawing.Point(48, 276)
         Me.lblSex.Name = "lblSex"
-        Me.lblSex.Size = New System.Drawing.Size(57, 13)
+        Me.lblSex.Size = New System.Drawing.Size(60, 13)
         Me.lblSex.TabIndex = 7
         Me.lblSex.Text = "Sex (M/F):"
         '
         'lblAge
         '
         Me.lblAge.AutoSize = True
+        Me.lblAge.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAge.Location = New System.Drawing.Point(76, 312)
         Me.lblAge.Name = "lblAge"
-        Me.lblAge.Size = New System.Drawing.Size(29, 13)
+        Me.lblAge.Size = New System.Drawing.Size(30, 13)
         Me.lblAge.TabIndex = 9
         Me.lblAge.Text = "Age:"
         '
         'lblHeight
         '
         Me.lblHeight.AutoSize = True
+        Me.lblHeight.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeight.Location = New System.Drawing.Point(47, 348)
         Me.lblHeight.Name = "lblHeight"
-        Me.lblHeight.Size = New System.Drawing.Size(58, 13)
+        Me.lblHeight.Size = New System.Drawing.Size(64, 13)
         Me.lblHeight.TabIndex = 11
         Me.lblHeight.Text = "Height (in):"
         '
         'lblWeight
         '
         Me.lblWeight.AutoSize = True
+        Me.lblWeight.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblWeight.Location = New System.Drawing.Point(44, 384)
         Me.lblWeight.Name = "lblWeight"
-        Me.lblWeight.Size = New System.Drawing.Size(61, 13)
+        Me.lblWeight.Size = New System.Drawing.Size(68, 13)
         Me.lblWeight.TabIndex = 13
         Me.lblWeight.Text = "Weight (lb):"
         '
         'lblGoalWeight
         '
         Me.lblGoalWeight.AutoSize = True
+        Me.lblGoalWeight.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblGoalWeight.Location = New System.Drawing.Point(36, 420)
         Me.lblGoalWeight.Name = "lblGoalWeight"
-        Me.lblGoalWeight.Size = New System.Drawing.Size(69, 13)
+        Me.lblGoalWeight.Size = New System.Drawing.Size(74, 13)
         Me.lblGoalWeight.TabIndex = 15
         Me.lblGoalWeight.Text = "Goal Weight:"
         '
         'lblGoalDate
         '
         Me.lblGoalDate.AutoSize = True
+        Me.lblGoalDate.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblGoalDate.Location = New System.Drawing.Point(47, 456)
         Me.lblGoalDate.Name = "lblGoalDate"
-        Me.lblGoalDate.Size = New System.Drawing.Size(58, 13)
+        Me.lblGoalDate.Size = New System.Drawing.Size(61, 13)
         Me.lblGoalDate.TabIndex = 17
         Me.lblGoalDate.Text = "Goal Date:"
         '
         'lblBMI
         '
         Me.lblBMI.AutoSize = True
+        Me.lblBMI.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBMI.Location = New System.Drawing.Point(76, 492)
         Me.lblBMI.Name = "lblBMI"
-        Me.lblBMI.Size = New System.Drawing.Size(29, 13)
+        Me.lblBMI.Size = New System.Drawing.Size(30, 13)
         Me.lblBMI.TabIndex = 27
         Me.lblBMI.Text = "BMI:"
         '
@@ -314,10 +324,11 @@ Partial Class NewProfiles
         '
         Me.txtID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "ID", True))
         Me.txtID.Enabled = False
+        Me.txtID.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID.Location = New System.Drawing.Point(124, 164)
         Me.txtID.Name = "txtID"
         Me.txtID.ReadOnly = True
-        Me.txtID.Size = New System.Drawing.Size(100, 20)
+        Me.txtID.Size = New System.Drawing.Size(100, 22)
         Me.txtID.TabIndex = 2
         Me.txtID.TabStop = False
         '
@@ -325,78 +336,87 @@ Partial Class NewProfiles
         '
         Me.txtFirstName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "First Name", True))
         Me.txtFirstName.Enabled = False
+        Me.txtFirstName.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFirstName.Location = New System.Drawing.Point(124, 200)
         Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(100, 20)
+        Me.txtFirstName.Size = New System.Drawing.Size(100, 22)
         Me.txtFirstName.TabIndex = 2
         '
         'txtLastName
         '
         Me.txtLastName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Last Name", True))
         Me.txtLastName.Enabled = False
+        Me.txtLastName.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLastName.Location = New System.Drawing.Point(124, 236)
         Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(100, 20)
+        Me.txtLastName.Size = New System.Drawing.Size(100, 22)
         Me.txtLastName.TabIndex = 3
         '
         'txtSex
         '
         Me.txtSex.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Sex (M/F)", True))
         Me.txtSex.Enabled = False
+        Me.txtSex.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSex.Location = New System.Drawing.Point(124, 272)
         Me.txtSex.Name = "txtSex"
-        Me.txtSex.Size = New System.Drawing.Size(100, 20)
+        Me.txtSex.Size = New System.Drawing.Size(100, 22)
         Me.txtSex.TabIndex = 4
         '
         'txtAge
         '
         Me.txtAge.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Age", True))
         Me.txtAge.Enabled = False
+        Me.txtAge.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAge.Location = New System.Drawing.Point(124, 308)
         Me.txtAge.Name = "txtAge"
-        Me.txtAge.Size = New System.Drawing.Size(100, 20)
+        Me.txtAge.Size = New System.Drawing.Size(100, 22)
         Me.txtAge.TabIndex = 5
         '
         'txtHeight
         '
         Me.txtHeight.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Height (in)", True))
         Me.txtHeight.Enabled = False
+        Me.txtHeight.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHeight.Location = New System.Drawing.Point(124, 344)
         Me.txtHeight.Name = "txtHeight"
-        Me.txtHeight.Size = New System.Drawing.Size(100, 20)
+        Me.txtHeight.Size = New System.Drawing.Size(100, 22)
         Me.txtHeight.TabIndex = 6
         '
         'txtWeight
         '
         Me.txtWeight.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Weight (lb)", True))
         Me.txtWeight.Enabled = False
+        Me.txtWeight.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtWeight.Location = New System.Drawing.Point(124, 380)
         Me.txtWeight.Name = "txtWeight"
-        Me.txtWeight.Size = New System.Drawing.Size(100, 20)
+        Me.txtWeight.Size = New System.Drawing.Size(100, 22)
         Me.txtWeight.TabIndex = 7
         '
         'txtGoalWeight
         '
         Me.txtGoalWeight.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "Goal Weight", True))
         Me.txtGoalWeight.Enabled = False
+        Me.txtGoalWeight.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtGoalWeight.Location = New System.Drawing.Point(124, 416)
         Me.txtGoalWeight.Name = "txtGoalWeight"
-        Me.txtGoalWeight.Size = New System.Drawing.Size(100, 20)
+        Me.txtGoalWeight.Size = New System.Drawing.Size(100, 22)
         Me.txtGoalWeight.TabIndex = 8
         '
         'datGoalDate
         '
         Me.datGoalDate.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.UserProfilesBindingSource, "Goal Date", True))
         Me.datGoalDate.Enabled = False
+        Me.datGoalDate.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.datGoalDate.Location = New System.Drawing.Point(124, 452)
         Me.datGoalDate.Name = "datGoalDate"
-        Me.datGoalDate.Size = New System.Drawing.Size(200, 20)
+        Me.datGoalDate.Size = New System.Drawing.Size(200, 22)
         Me.datGoalDate.TabIndex = 9
         '
         'chkNoRestrictions
         '
         Me.chkNoRestrictions.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "No Restrictions", True))
         Me.chkNoRestrictions.Enabled = False
+        Me.chkNoRestrictions.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkNoRestrictions.Location = New System.Drawing.Point(363, 157)
         Me.chkNoRestrictions.Name = "chkNoRestrictions"
         Me.chkNoRestrictions.Size = New System.Drawing.Size(118, 24)
@@ -408,6 +428,7 @@ Partial Class NewProfiles
         '
         Me.chkVegetarian.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Vegetarian", True))
         Me.chkVegetarian.Enabled = False
+        Me.chkVegetarian.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkVegetarian.Location = New System.Drawing.Point(363, 183)
         Me.chkVegetarian.Name = "chkVegetarian"
         Me.chkVegetarian.Size = New System.Drawing.Size(104, 24)
@@ -419,6 +440,7 @@ Partial Class NewProfiles
         '
         Me.chkVegan.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Vegan", True))
         Me.chkVegan.Enabled = False
+        Me.chkVegan.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkVegan.Location = New System.Drawing.Point(363, 209)
         Me.chkVegan.Name = "chkVegan"
         Me.chkVegan.Size = New System.Drawing.Size(104, 24)
@@ -430,6 +452,7 @@ Partial Class NewProfiles
         '
         Me.chkGlutenFree.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Gluten Free", True))
         Me.chkGlutenFree.Enabled = False
+        Me.chkGlutenFree.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkGlutenFree.Location = New System.Drawing.Point(363, 235)
         Me.chkGlutenFree.Name = "chkGlutenFree"
         Me.chkGlutenFree.Size = New System.Drawing.Size(104, 24)
@@ -442,16 +465,18 @@ Partial Class NewProfiles
         Me.txtBMI.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.txtBMI.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserProfilesBindingSource, "BMI", True))
         Me.txtBMI.Enabled = False
+        Me.txtBMI.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBMI.Location = New System.Drawing.Point(124, 488)
         Me.txtBMI.Name = "txtBMI"
         Me.txtBMI.ReadOnly = True
-        Me.txtBMI.Size = New System.Drawing.Size(100, 20)
+        Me.txtBMI.Size = New System.Drawing.Size(100, 22)
         Me.txtBMI.TabIndex = 28
         '
         'chkPeanut
         '
         Me.chkPeanut.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Peanut Allergy", True))
         Me.chkPeanut.Enabled = False
+        Me.chkPeanut.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkPeanut.Location = New System.Drawing.Point(487, 157)
         Me.chkPeanut.Name = "chkPeanut"
         Me.chkPeanut.Size = New System.Drawing.Size(104, 24)
@@ -463,6 +488,7 @@ Partial Class NewProfiles
         '
         Me.chkTreeNut.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Tree Nut Allergy", True))
         Me.chkTreeNut.Enabled = False
+        Me.chkTreeNut.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkTreeNut.Location = New System.Drawing.Point(487, 183)
         Me.chkTreeNut.Name = "chkTreeNut"
         Me.chkTreeNut.Size = New System.Drawing.Size(104, 24)
@@ -474,6 +500,7 @@ Partial Class NewProfiles
         '
         Me.chkSoy.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Soy Allergy", True))
         Me.chkSoy.Enabled = False
+        Me.chkSoy.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkSoy.Location = New System.Drawing.Point(487, 209)
         Me.chkSoy.Name = "chkSoy"
         Me.chkSoy.Size = New System.Drawing.Size(104, 24)
@@ -485,6 +512,7 @@ Partial Class NewProfiles
         '
         Me.chkEgg.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Egg Allergy", True))
         Me.chkEgg.Enabled = False
+        Me.chkEgg.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkEgg.Location = New System.Drawing.Point(487, 235)
         Me.chkEgg.Name = "chkEgg"
         Me.chkEgg.Size = New System.Drawing.Size(104, 24)
@@ -496,6 +524,7 @@ Partial Class NewProfiles
         '
         Me.chkFish.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Fish Allergy", True))
         Me.chkFish.Enabled = False
+        Me.chkFish.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkFish.Location = New System.Drawing.Point(487, 261)
         Me.chkFish.Name = "chkFish"
         Me.chkFish.Size = New System.Drawing.Size(104, 24)
@@ -507,6 +536,7 @@ Partial Class NewProfiles
         '
         Me.chkShellfish.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Shellfish Allergy", True))
         Me.chkShellfish.Enabled = False
+        Me.chkShellfish.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkShellfish.Location = New System.Drawing.Point(487, 287)
         Me.chkShellfish.Name = "chkShellfish"
         Me.chkShellfish.Size = New System.Drawing.Size(104, 24)
@@ -518,6 +548,7 @@ Partial Class NewProfiles
         '
         Me.chkLactose.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Lactose Allergy", True))
         Me.chkLactose.Enabled = False
+        Me.chkLactose.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkLactose.Location = New System.Drawing.Point(487, 313)
         Me.chkLactose.Name = "chkLactose"
         Me.chkLactose.Size = New System.Drawing.Size(104, 24)
@@ -529,6 +560,7 @@ Partial Class NewProfiles
         '
         Me.chkWheat.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UserProfilesBindingSource, "Wheat Allergy", True))
         Me.chkWheat.Enabled = False
+        Me.chkWheat.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkWheat.Location = New System.Drawing.Point(487, 339)
         Me.chkWheat.Name = "chkWheat"
         Me.chkWheat.Size = New System.Drawing.Size(104, 24)
@@ -539,6 +571,7 @@ Partial Class NewProfiles
         'btnBMI
         '
         Me.btnBMI.Enabled = False
+        Me.btnBMI.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBMI.Location = New System.Drawing.Point(230, 486)
         Me.btnBMI.Name = "btnBMI"
         Me.btnBMI.Size = New System.Drawing.Size(157, 23)
@@ -549,36 +582,37 @@ Partial Class NewProfiles
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(33, 112)
+        Me.lblTitle.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Location = New System.Drawing.Point(44, 112)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(235, 36)
+        Me.lblTitle.Size = New System.Drawing.Size(232, 40)
         Me.lblTitle.TabIndex = 46
         Me.lblTitle.Text = "Profile Attributes"
         '
         'lblRestrictions
         '
         Me.lblRestrictions.AutoSize = True
-        Me.lblRestrictions.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRestrictions.Location = New System.Drawing.Point(386, 112)
+        Me.lblRestrictions.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRestrictions.Location = New System.Drawing.Point(356, 112)
         Me.lblRestrictions.Name = "lblRestrictions"
-        Me.lblRestrictions.Size = New System.Drawing.Size(172, 36)
+        Me.lblRestrictions.Size = New System.Drawing.Size(162, 40)
         Me.lblRestrictions.TabIndex = 47
         Me.lblRestrictions.Text = "Restrictions"
         '
         'lblWelcome
         '
         Me.lblWelcome.AutoSize = True
-        Me.lblWelcome.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWelcome.Location = New System.Drawing.Point(135, 49)
+        Me.lblWelcome.Font = New System.Drawing.Font("Segoe UI", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblWelcome.Location = New System.Drawing.Point(30, 44)
         Me.lblWelcome.Name = "lblWelcome"
-        Me.lblWelcome.Size = New System.Drawing.Size(359, 46)
+        Me.lblWelcome.Size = New System.Drawing.Size(330, 50)
         Me.lblWelcome.TabIndex = 48
         Me.lblWelcome.Text = "Welcome to Eat Fit"
         '
         'btnNext
         '
         Me.btnNext.Enabled = False
+        Me.btnNext.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNext.Location = New System.Drawing.Point(479, 504)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(138, 45)
@@ -588,6 +622,7 @@ Partial Class NewProfiles
         '
         'btnNewUser
         '
+        Me.btnNewUser.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNewUser.Location = New System.Drawing.Point(285, 322)
         Me.btnNewUser.Name = "btnNewUser"
         Me.btnNewUser.Size = New System.Drawing.Size(130, 39)
@@ -598,6 +633,7 @@ Partial Class NewProfiles
         'btnDelete
         '
         Me.btnDelete.Enabled = False
+        Me.btnDelete.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelete.Location = New System.Drawing.Point(285, 371)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(130, 39)
@@ -608,6 +644,7 @@ Partial Class NewProfiles
         '
         'btnReturningUser
         '
+        Me.btnReturningUser.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReturningUser.Location = New System.Drawing.Point(285, 272)
         Me.btnReturningUser.Name = "btnReturningUser"
         Me.btnReturningUser.Size = New System.Drawing.Size(130, 39)
@@ -617,6 +654,7 @@ Partial Class NewProfiles
         '
         'btnTempNav
         '
+        Me.btnTempNav.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTempNav.Location = New System.Drawing.Point(12, 526)
         Me.btnTempNav.Name = "btnTempNav"
         Me.btnTempNav.Size = New System.Drawing.Size(167, 23)
@@ -673,6 +711,7 @@ Partial Class NewProfiles
         Me.Controls.Add(Me.lblID)
         Me.Controls.Add(Me.txtID)
         Me.Controls.Add(Me.UserProfilesBindingNavigator)
+        Me.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MaximizeBox = False
         Me.Name = "NewProfiles"
         Me.Text = "Eat Fit"
